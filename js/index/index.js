@@ -105,17 +105,17 @@ define(["jquery", "jquery-cookie"], function () {
 
         // 滚动返回顶部
         // console.log($(document));
-        $(document).scroll(function () { 
+        $(document).scroll(function () {
             // 当鼠标滚动到header以下时, 显示返回顶部按钮
             scrollEvent();
         })
         scrollEvent();
         function scrollEvent() {
-            if($(window).scrollTop() >= $('#main-nav').offset().top){
+            if ($(window).scrollTop() >= $('#main-nav').offset().top) {
                 $('#fs-toolbar1 .top').css({
                     visibility: "visible"
                 });
-            }else{
+            } else {
                 $('#fs-toolbar1 .top').css({
                     visibility: "hidden"
                 });
@@ -126,11 +126,20 @@ define(["jquery", "jquery-cookie"], function () {
             console.log($(window).scrollTop());
             $('body,html').animate({
                 scrollTop: 0
-              },100);
+            }, 100);
             return false;
         });
 
-        
+        // 点击email输入框, 清空输入框
+        $('#email').focus(function () {
+            if ($(this).val() == '请输入您的Email地址') {
+                $(this).val('');
+            }
+        }).blur(function () {
+            if ($('#email').val() == '') {
+                $(this).val('请输入您的Email地址');
+            }
+        });
     }
 
 
