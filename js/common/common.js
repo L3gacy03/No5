@@ -1,10 +1,10 @@
-define(["jquery", "jquery-cookie"], function ($) {
+define(["jquery", "jquery-cookie"], function () {
     // header & footer
     function common() {
         // 渲染商品导航栏
         $.ajax({
             type: 'GET',
-            url: "./api/getJSON/goodsNavData.php",
+            url: "../api/getJSON/goodsNavData.php",
             success(data) {
                 // console.log(data);
                 // 总框架
@@ -48,7 +48,7 @@ define(["jquery", "jquery-cookie"], function ($) {
                     html += `
                     <dl id="${dl.id}">
                         <dt>
-                            <strong><a href="${dl.title == '面部护理' ? './html/goodsList.html' : 'javascript:;'}">${dl.title}</a></strong>
+                            <strong><a href="${dl.title == '面部护理' ? './goodsList.html' : 'javascript:;'}">${dl.title}</a></strong>
                             <p>
                                 ${sub1}
                             </p>
@@ -135,11 +135,11 @@ define(["jquery", "jquery-cookie"], function ($) {
                 $(this).val('');
             }
         }).blur(function () {
-            if ($(this).val() == '') {
+            if ($('#email').val() == '') {
                 $(this).val('请输入您的Email地址');
             }
         });
-
+        
         // 点击搜索输入框, 清空输入框
         $('#search').focus(function () {
             if($(this).val() == '护手霜'){

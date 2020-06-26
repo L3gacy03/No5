@@ -1,0 +1,762 @@
+/*筛选页*/
+.content {
+    width : 1200px;
+    margin: 0 auto;
+
+    .current {
+        line-height: 34px;
+        color      : #999;
+        width      : 980px;
+        height     : 34px;
+        margin-top : 15px;
+
+        a {
+            color: #333;
+
+            &:hover {
+                color: #ff1a3a;
+            }
+        }
+
+        .STYLE {
+            margin: 0 10px;
+        }
+
+        .cpname {
+            color : #4e7fc2;
+            margin: 0px;
+        }
+    }
+
+    .c-left {
+        float: left;
+        width: 230px;
+
+        .sidebar {
+            width : 228px;
+            border: 1px solid #e4e4e4;
+            color : #333;
+
+            a {
+                color: #333;
+            }
+
+            h3 {
+                width      : 228px;
+                background : url(http://photo.no5.com.cn/page_2014/images/h3bg.jpg) repeat-x;
+                height     : 36px;
+                line-height: 36px;
+                cursor     : pointer;
+                font-size  : 13px;
+
+                .open {
+                    background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0 -234px;
+                    width     : 15px;
+                    height    : 14px;
+                    float     : left;
+                    margin    : 10px 10px 0px 12px;
+                }
+
+                .close {
+                    background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0 -248px;
+                    width     : 15px;
+                    height    : 14px;
+                    float     : left;
+                    margin    : 10px 10px 0px 12px;
+                }
+            }
+
+            .sl {
+                font-size  : 12px;
+                color      : #999;
+                font-weight: normal;
+                margin-left: 2px;
+            }
+
+            ul {
+                width        : 154px;
+                border-bottom: 1px solid #e4e4e4;
+                padding      : 8px 37px;
+
+                li {
+                    line-height: 26px;
+                    height     : 26px;
+                    cursor     : pointer;
+                }
+            }
+        }
+
+        .box_tj {
+            width     : 228px;
+            border    : 1px solid #e4e4e4;
+            margin-top: 10px;
+
+            .lastdiv {
+                border-bottom: none;
+            }
+        }
+
+        .title_tj {
+            width        : 226px;
+            height       : 33px;
+            line-height  : 33px;
+            margin       : 1px;
+            background   : url(http://photo.no5.com.cn/page_2014/images/p2lbg.jpg) repeat-x;
+            color        : #333;
+            font-family  : microsoft yahei;
+            font-size    : 14px;
+            font-weight  : bold;
+            text-align   : center;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .good_tj {
+            border-bottom: 1px dashed #e4e4e4;
+            text-align   : center;
+            padding      : 6px;
+            width        : 216px;
+        }
+
+        .imgbox {
+            width : 120px;
+            height: 120px;
+            margin: 10px auto;
+        }
+
+        .textbox {
+            p {
+                line-height: 20px;
+            }
+
+            .proname {
+                width        : 210px;
+                overflow     : hidden;
+                text-overflow: ellipsis;
+                white-space  : nowrap;
+                text-align   : center;
+                padding      : 0 3px;
+            }
+
+            .proprice {
+                font-family: microsoft yahei;
+                color      : #ff1a3a;
+                font-size  : 14px;
+                font-weight: bold;
+
+                span {
+                    font-family: verdana;
+                }
+            }
+        }
+
+        .good_rx {
+            padding      : 15px 10px;
+            margin-bottom: 0px;
+            width        : 208px;
+            height       : 82px;
+            overflow     : hidden;
+        }
+
+        .tl_img {
+            float     : left;
+            width     : 100px;
+            height    : 82px;
+            text-align: left;
+        }
+
+        .tl_text {
+            float      : left;
+            width      : 102px;
+            padding-top: 15px;
+
+            p {
+                line-height: 16px;
+            }
+        }
+
+        .rx_name {
+            text-align: left;
+            height    : 30px;
+            overflow  : hidden;
+        }
+
+        .rx_price {
+            text-align : right;
+            margin-top : 8px;
+            font-family: microsoft yahei;
+            color      : #ff1a3a;
+            font-size  : 14px;
+            font-weight: bold;
+
+            span {
+                font-family: verdana;
+            }
+        }
+
+        .good_zj {
+            p {
+                line-height: 16px;
+            }
+        }
+    }
+
+    .c-right {
+        width: 960px;
+        float: right;
+
+        h2 {
+            white-space : nowrap;
+            height      : 34px;
+            line-height : 36px;
+            background  : #f3f3f3;
+            font-weight : normal;
+            padding-left: 16px;
+
+            span {
+                color      : #fc1c5a;
+                font-weight: bold;
+                margin     : 0 3px;
+            }
+        }
+
+        .reco {
+            border       : 1px solid #e4e4e4;
+            width        : 958px;
+            float        : left;
+            margin-bottom: 10px;
+
+            dl {
+                width  : 293px;
+                float  : left;
+                padding: 13px;
+
+                dt {
+                    float: left;
+                    width: 146px;
+
+                    dd {
+                        float: left;
+                        width: 147px;
+                    }
+                }
+
+                .proname {
+                    line-height: 18px;
+                    height     : 36px;
+                    overflow   : hidden;
+                    margin-top : 20px;
+                }
+
+                .proprice {
+                    margin-top : 12px;
+                    color      : #ff1a3a;
+                    font-size  : 14px;
+                    font-weight: bold;
+
+                    span {
+                        font-family: verdana;
+                    }
+                }
+
+                .buybtn {
+                    margin-top: 8px;
+
+                    a {
+                        display      : block;
+                        float        : left;
+                        width        : 80px;
+                        height       : 24px;
+                        line-height  : 24px;
+                        border-radius: 3px;
+                        background   : #fc1c5a;
+                        text-align   : center;
+                        color        : #fff;
+                    }
+                }
+            }
+        }
+
+        .select {
+            width         : 914px;
+            border        : 3px solid #f4f4f4;
+            float         : left;
+            padding       : 20px;
+            padding-bottom: 15px;
+
+            dl {
+                width        : 914px;
+                border-bottom: 1px solid #f4f4f4;
+                float        : left;
+                padding      : 3px 0;
+
+                dt {
+                    width      : 70px;
+                    float      : left;
+                    text-align : right;
+                    color      : #000;
+                    font-weight: bold;
+                    line-height: 24px;
+                }
+
+                dd {
+                    width: 830px;
+                    float: right;
+                    color: #005ea7;
+
+                    a {
+                        color: #0066cc;
+                    }
+
+                    .zm {
+                        float       : left;
+                        height      : 20px;
+                        border      : 1px solid #fff;
+                        margin-right: 3px;
+                        padding     : 0px 10px;
+                        line-height : 20px;
+                        font-family : Verdana;
+                        cursor      : pointer;
+                        color       : #0066cc;
+
+                        a {
+                            border: 1px solid #fff;
+
+                            &:hover {
+                                color     : #fff;
+                                background: #02a3f0;
+                                border    : 1px solid #02a3f0;
+                            }
+                        }
+                    }
+
+                    .more {
+                        float        : right;
+                        width        : 46px;
+                        padding-left : 10px;
+                        height       : 20px;
+                        line-height  : 20px;
+                        border       : 1px solid #e0dee0;
+                        border-radius: 2px;
+                        background   : #f7f7f7 url(http://photo.no5.com.cn/page_2014/images/b.jpg) no-repeat 38px 8px;
+                        cursor       : pointer;
+                        color        : #333;
+                    }
+
+                    .curr {
+                        border    : 1px solid #02a3f0;
+                        background: #02a3f0;
+                        color     : #fff;
+                        position  : relative;
+
+                        b {
+                            position    : absolute;
+                            left        : 50%;
+                            bottom      : -10px;
+                            overflow    : hidden;
+                            width       : 0px;
+                            height      : 0px;
+                            border-width: 5px;
+                            border-style: solid dashed dashed;
+                            border-color: #02a3f0 transparent transparent;
+                            margin-left : -5px;
+                        }
+                    }
+
+                    .brands {
+                        width         : 750px;
+                        float         : left;
+                        padding       : 10px 40px;
+                        padding-bottom: 4px;
+
+                        div {
+                            width      : 125px;
+                            overflow   : hidden;
+                            white-space: nowrap;
+                            height     : 20px;
+                            padding-top: 4px;
+                            float      : left;
+                            margin-left: 20px;
+
+                            a {
+                                &:hover {
+                                    color     : #fff;
+                                    background: #02a3f0;
+                                    border    : 1px solid #02a3f0;
+                                }
+                            }
+                        }
+                    }
+
+                    .bux {
+                        background  : #02a3f0;
+                        float       : left;
+                        height      : 20px;
+                        border      : 1px solid #fff;
+                        margin-right: 16px;
+                        line-height : 20px;
+                        font-family : Verdana;
+                        cursor      : default;
+                        color       : #fff;
+                        padding     : 0 4px;
+                        margin-top  : 1px;
+
+                        a {
+                            color: #fff;
+                        }
+                    }
+
+                    .bux2 {
+                        background: #02a3f0;
+                        color     : #fff;
+                    }
+
+                    .bux-out {
+                        background: #fff;
+
+                        a {
+                            color   : #06c;
+                            display : inline-block;
+                            padding : 3px 5px;
+                            position: relative;
+                            top     : -3px;
+                            left    : -5px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .lastdl {
+                border-bottom: none;
+            }
+        }
+
+        .filter {
+            margin-top: 10px;
+            width     : 938px;
+            height    : 26px;
+            background: url(http://photo.no5.com.cn/page_2014/images/filbg.jpg) repeat-x;
+            border    : 1px solid #eee;
+            border-top: 2px solid #15ade0;
+            float     : left;
+            padding   : 5px 10px;
+
+            dl {
+                dd {
+                    height      : 24px;
+                    border      : 1px solid #cecbce;
+                    background  : #f6f6f6;
+                    border      : 1px solid #cecbce;
+                    margin-right: 5px;
+                    line-height : 24px;
+                    padding     : 0 10px;
+                }
+
+                .curr {
+                    background : #fc1c5a;
+                    border     : 1px solid #fc1c5a;
+                    color      : #fff;
+                    font-weight: bold;
+                    position   : relative;
+
+                    a {
+                        color: #fff;
+                    }
+
+                    b {
+                        top       : 6px;
+                        right     : 8px;
+                        width     : 9px;
+                        height    : 11px;
+                        background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat;
+                        position  : absolute;
+                        overflow  : hidden;
+                    }
+                }
+
+                .up {
+                    b {
+                        background-position: -19px -246px;
+                    }
+                }
+
+                .down {
+                    b {
+                        background-position: -19px -234px;
+                    }
+                }
+            }
+
+            .page {
+                float      : right;
+                height     : 26px;
+                border-left: 1px solid #e7e3e7;
+
+                .mb {
+                    font-family: verdana;
+                    border     : 0;
+                    padding    : 4px 11px;
+
+                    i {
+                        font-style : normal;
+                        font-weight: bold;
+                        color      : #fc1c5a;
+                    }
+                }
+
+                .disa-btn {
+                    padding-left: 12px;
+                    color       : #ccc;
+                    cursor      : default;
+                }
+            }
+
+            .total {
+                float      : right;
+                height     : 22px;
+                padding    : 2px 15px 2px 0;
+                line-height: 22px;
+                font-family: verdana;
+                color      : #fc1c5a;
+            }
+
+            dd {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.curr {
+                    &:hover {
+                        text-decoration: underline;
+                        color          : #fff;
+                    }
+                }
+            }
+        }
+
+        .cplist {
+            width : 960px;
+            float : left;
+            margin: 10px 0;
+
+            dl {
+                width     : 214px;
+                float     : left;
+                background: #fff;
+                padding   : 13px;
+
+                dt {
+                    padding   : 7px;
+                    width     : 200px;
+                    height    : 200px;
+                    background: #fff;
+                }
+
+                .pro-name {
+                    line-height: 18px;
+                    height     : 36px;
+                    overflow   : hidden;
+
+                    em {
+                        color: #fc1c5a;
+                    }
+
+                    a {
+                        &:hover {
+                            color          : #ff1a3a;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .pro-price {
+                    color      : #ff1a3a;
+                    font-size  : 14px;
+                    font-weight: bold;
+                    margin     : 10px 0 3px 0;
+
+                    span {
+                        font-family: verdana;
+                        font-size  : 16px;
+                    }
+
+                    .zhekou {
+                        font-size  : 12px;
+                        font-weight: normal;
+                    }
+                }
+
+                .buybtn {
+                    a {
+                        display      : block;
+                        float        : left;
+                        padding      : 0 15px;
+                        height       : 24px;
+                        line-height  : 24px;
+                        border-radius: 3px;
+                        background   : #fc1c5a;
+                        text-align   : center;
+                    }
+
+                    .quit {
+                        background: #ffff00;
+                        color     : #ff0000;
+                    }
+
+                    .add {
+                        background: #fc1c5a;
+                        color     : #fff;
+                    }
+
+                    .shouc {
+                        background : #efefef;
+                        color      : #666;
+                        margin-left: 10px;
+                        border     : 1px solid #dfdfdf;
+                        height     : 22px;
+                        line-height: 22px;
+                    }
+                }
+
+                &:hover {
+                    background: #f4f4f4;
+                }
+            }
+
+            .nofind {
+                position   : relative;
+                padding    : 20px 0 0 170px;
+                height     : 62px;
+                font-size  : 14px;
+                font-weight: bold;
+                color      : #f60;
+            }
+        }
+    }
+
+    .page-below {
+        clear: both;
+
+        .inner {
+            float     : right;
+            margin-top: 20px;
+        }
+
+        a {
+            &:hover {
+                background-color: #ccc;
+            }
+
+            &.curr {
+                &:hover {
+                    background-color: #02a3f0;
+                }
+            }
+        }
+
+        .elli {
+            float      : left;
+            padding    : 0 10px;
+            font-family: verdana;
+            border     : none;
+            background : none;
+        }
+
+        .disa-btn {
+            color : #ccc;
+            cursor: default;
+        }
+
+        .curr {
+            background : #02a3f0;
+            color      : #fff;
+            border     : 1px solid #02a3f0;
+            font-weight: bold;
+            cursor     : default;
+        }
+    }
+}
+
+/*二级页面共有部分*/
+.shaixuan {
+    dl {
+        display: none;
+    }
+}
+
+/*left*/
+.content .c-left .sidebar a:hover,
+.content .c-left .sidebar li:hover a {
+    color: #ff1a3a;
+}
+
+/*right*/
+/*right下部翻页*/
+.content .page-below a,
+.content .page-below span {
+    float      : left;
+    height     : 20px;
+    padding    : 2px 10px;
+    border     : 1px solid #ccc;
+    margin-left: 2px;
+    font-family: arial;
+    line-height: 20px;
+    font-size  : 12px;
+    overflow   : hidden;
+    color      : #005aa0;
+    background : #fff;
+}
+
+/*right*/
+/*right筛选框*/
+/*right产品列表*/
+.content .c-right .filter dl,
+.content .c-right .filter dl dt,
+.content .c-right .filter dl dd {
+    float      : left;
+    line-height: 26px;
+}
+
+.content .c-right .filter .page span,
+.content .c-right .filter .page a {
+    float        : left;
+    padding      : 3px 10px;
+    border       : 1px solid #ccc;
+    margin-left  : 2px;
+    font-family  : arial;
+    overflow     : hidden;
+    border-radius: 3px;
+    background   : #f8f8f8;
+    height       : 14px;
+    line-height  : 14px;
+    color        : #005aa0;
+    margin-top   : 2px;
+}
+
+#load-tip {
+    position   : absolute;
+    visibility : hidden;
+    color      : #ff4e00;
+    background : #fef8d1 url(/images/loading.gif) no-repeat 420px;
+    border     : 1px solid #fce3b6;
+    padding    : 10px;
+    width      : 938px;
+    text-align : center;
+    margin-top : 40px;
+    margin-left: -11px;
+    margin-top : 15px;
+    opacity    : 0.8;
+    filter     : alpha(opacity=80);
+    box-shadow : 3px 3px 1px #b8b8b8;
+}
+
+/*搜索页*/
+.content .c-right .filter dl .up a,
+.content .c-right .filter dl .down a {
+    padding-right: 10px;
+}

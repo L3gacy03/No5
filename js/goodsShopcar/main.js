@@ -9,7 +9,8 @@ require.config({
         //自定义的模块名字: 模块的路径
         "jquery": "../../libs/jquery-1.10.1.min",
         "jquery-cookie": "../../libs/jquery.cookie",
-        "index": "index"
+        "common": "../common/common",
+        "goodsShopcar": "goodsShopcar"
     },
     shim: {
         //设置依赖关系  先引入jquery以后，再去加载jquery-cookie
@@ -20,7 +21,6 @@ require.config({
 // 引入模块，使用模块中的方法
 // 前后模块，和后面的参数，顺序一定要一一对应。
 // 异步运行
-require(["index"], function (index) {
-    index.common();
-    index.content();
+require(["common", "goodsShopcar"], function (common, goodsShopcar) {
+    common.common();
 })
