@@ -23,4 +23,5 @@ require.config({
 // 异步运行
 require(["common", "goodsList"], function (common, goodsList) {
     common.common();
+    goodsList.goodsListRender();
 })
