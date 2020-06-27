@@ -3,7 +3,7 @@ define(["jquery", "jquery-cookie"], function ($) {
         $.ajax({
             type: "GET",
             url: "../api/getJSON/goodsList.php",
-            success(data){
+            success(data) {
                 // console.log(data);
                 let html = data.map(item => {
                     return `
@@ -29,13 +29,37 @@ define(["jquery", "jquery-cookie"], function ($) {
                 }).join('');
                 $('#cplist').html(html);
             },
-            error(err){
+            error(err) {
                 console.log(err);
             }
         });
     }
 
+    function bindEvent() {
+        // 左边商品分类导航栏
+        $('#left-catnav').on('click', 'h3', function () {
+            if ($(this).find('span').hasClass('open')) {
+                $(this).find('span:first').removeClass('open').addClass('close');
+                $(this).next().hide();
+            } else {
+                $(this).find('span:first').removeClass('close').addClass('open');
+                $(this).next().show();
+            }
+        });
+
+        // 点击更多, 显示更多商品品牌
+        $('.more').click(function () {
+            if($(this).text() == '更多'){
+                $(this).text('收起');
+                $('.brands').find('div').show();
+            }else{
+                $(this).text('更多');
+                $('.brands div:eq(19)').nextAll().hide();
+            }
+        });
+    }
+
     return {
-        goodsListRender
+        goodsListRender, bindEvent
     }
 });

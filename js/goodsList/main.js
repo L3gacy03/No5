@@ -24,4 +24,5 @@ require.config({
 require(["common", "goodsList"], function (common, goodsList) {
     common.common();
     goodsList.goodsListRender();
+    goodsList.bindEvent();
 })
