@@ -49,13 +49,35 @@ define(["jquery", "jquery-cookie"], function ($) {
 
         // 点击更多, 显示更多商品品牌
         $('.more').click(function () {
-            if($(this).text() == '更多'){
+            if ($(this).text() == '更多') {
                 $(this).text('收起');
                 $('.brands').find('div').show();
-            }else{
+            } else {
                 $(this).text('更多');
                 $('.brands div:eq(19)').nextAll().hide();
             }
+        });
+
+        // 点击筛选
+        $('#brand-box .zm').click(function () {
+            $(this).addClass('curr').siblings().removeClass('curr');
+            if($(this).text() != '不限'){
+                $('.more').hide();
+            }else{
+                $('.more').show();
+            }
+            const self = this;
+            $.each($('.brands div'), function () {
+                // console.log($(this).attr("elem-data"));
+                if($(self).text().includes($(this).attr("elem-data"))){
+                    $(this).show();
+                }else if($(self).text() == '不限'){
+                    $('.brands').find('div').show();
+                    $('.brands div:eq(19)').nextAll().hide();
+                }else{
+                    $(this).hide();
+                }
+            });
         });
     }
 
