@@ -1,0 +1,1450 @@
+@charset "UTF-8";
+.imgLoad31 {
+  background: url(http://photo.no5.com.cn/main/images/ldg_gry_31.gif) no-repeat 50% 50%;
+}
+
+.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clrH15 {
+  background: none;
+  border: none;
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 0;
+  height: 15px;
+}
+
+.clrH10 {
+  background: none;
+  border: none;
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 0;
+  height: 15px;
+}
+
+.clrH2 {
+  background-color: #e4e4e4;
+  border: none;
+  clear: both;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 2px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #666666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fc7f0f;
+}
+
+button,
+pntr {
+  cursor: hand;
+  cursor: pointer;
+}
+
+textarea,
+select {
+  outline: none;
+  resize: none;
+}
+
+input {
+  vertical-align: middle;
+}
+
+.hot_spic {
+  width: 23px;
+  height: 11px;
+  background: url(http://photo.no5.com.cn/main/images/hot.jpg) no-repeat;
+  position: absolute;
+  z-index: 98;
+  top: 69px;
+  left: 1167px;
+}
+
+.new_spic {
+  width: 23px;
+  height: 11px;
+  background: url(http://photo.no5.com.cn/main/images/new_pic.jpg) no-repeat;
+  position: absolute;
+  z-index: 98;
+  top: 69px;
+  left: 1082px;
+}
+
+.content {
+  width: 980px !important;
+  margin: 10px auto !important;
+  margin-top: 0 !important;
+}
+
+.current {
+  line-height: 32px;
+  color: #999;
+  width: 980px;
+  height: 32px;
+  border-bottom: 2px solid #78b5f4;
+}
+
+.current a {
+  color: #333;
+}
+
+.current a:hover {
+  color: #fc7f0f;
+}
+
+.prodNavTxt {
+  margin: 0 10px;
+}
+
+.cpname {
+  color: #4e7fc2;
+  margin: 0px;
+}
+
+.part01 {
+  width: 980px;
+  margin-top: 15px;
+}
+
+.p01_l {
+  float: left;
+  width: 457px;
+}
+
+.p01_r {
+  float: right;
+  width: 503px;
+}
+
+.p01_r h2 {
+  font-size: 16px;
+  color: #333;
+  line-height: 20px;
+  padding: 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+#picIdxBox {
+  float: left;
+  width: 72px;
+  height: 380px;
+}
+
+.pic_li {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.pic_li img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #e4e4e4;
+}
+
+.pic_on img {
+  border: 1px solid #78b5f4;
+}
+
+#sPriNM,
+#sPriVL {
+  display: none;
+}
+
+.loadtip {
+  display: block;
+  margin: 1px;
+  background: url(http://photo.no5.com.cn/main/images/loading.gif) no-repeat;
+  padding: 3px;
+  padding-left: 18px;
+}
+
+/*zoom*/
+#pic_box {
+  width: 350px;
+  height: 350px;
+  margin: 0px 15px 0px 85px;
+  overflow: hidden;
+  cursor: move;
+}
+
+#magnifier {
+  position: absolute;
+  visibility: hidden;
+  width: 170px;
+  height: 170px;
+  border: 1px solid #0069ce;
+  background-color: #eaffff;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+#zoomBox {
+  position: absolute;
+  visibility: hidden;
+  top: 221px;
+  width: 391px;
+  height: 389px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  z-index: 1000000;
+}
+
+#zoomBox .zoomWait {
+  width: 100%;
+  height: 100%;
+  background: #ffffff url(http://photo.no5.com.cn/main/images/ldg_gry_31.gif) no-repeat 175px 175px;
+}
+
+#zoomBox .disBox {
+  position: absolute;
+  visibility: hidden;
+  width: 800px;
+  height: 800px;
+}
+
+#pic_chk_box {
+  display: none;
+}
+
+/*zoom*/
+.areatext {
+  background: #fff;
+  width: 550px;
+  height: 50px;
+  font-size: 12px;
+  padding: 6px;
+  border: 1px solid #e4e4e4;
+}
+
+#box_zjll {
+  padding-bottom: 10px;
+}
+
+#sticPic1 {
+  width: 200px;
+  height: 291px;
+  margin-top: 10px;
+  background: url(http://photo.no5.com.cn/main/images/ldg_gry_31.gif) no-repeat 50% 50%;
+}
+
+h2 .subTit {
+  color: #d11010;
+  margin-left: 5px;
+}
+
+.cppro {
+  padding: 12px 10px 2px 10px;
+  border-top: 1px dotted #e4e4e4;
+  width: 483px;
+}
+
+.prodTxt1 {
+  margin-left: 30px;
+}
+
+.prodRedTxt {
+  color: #d11010;
+}
+
+.prodRedBrd {
+  border: 1px solid #d11010;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.prodTxt2 {
+  vertical-align: middle;
+  _vertical-align: top;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.prodTxt2 img {
+  margin-bottom: 6px;
+  _position: relative;
+  _top: -2px;
+}
+
+.pro_name {
+  float: left;
+  width: 66px;
+  height: 28px;
+  padding-top: 1px;
+}
+
+#boxBuy {
+  background: #fffcf3;
+  border: 1px solid #f5debc;
+  height: 72px;
+  line-height: 72px;
+  padding-left: 21px;
+  _height: 0px;
+  _line-height: 0px;
+  _padding-top: 16px;
+  _padding-bottom: 16px;
+}
+
+#boxBuy img {
+  cursor: hand;
+  cursor: pointer;
+}
+
+#favSuc {
+  position: relative;
+  visibility: hidden;
+  float: left;
+  top: -48px;
+  left: 330px;
+  padding: 3px;
+  padding-left: 25px;
+  color: Green;
+  background: url(http://photo.no5.com.cn/main/images/complete1.jpg) no-repeat 5px 1px;
+}
+
+.msover {
+  position: absolute;
+  margin-top: 14px;
+  *position: static;
+  *margin-top: auto;
+  width: 173px;
+  height: 44px;
+  background: url(http://photo.no5.com.cn/main/images/ms_over.jpg) no-repeat;
+  border: none;
+}
+
+.msnow {
+  position: absolute;
+  margin-top: 14px;
+  *position: static;
+  *margin-top: auto;
+  width: 144px;
+  height: 36px;
+  background: url(http://photo.no5.com.cn/page_2014/images/seckill-button.png) no-repeat;
+  border: none;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.msnostart {
+  position: absolute;
+  margin-top: 14px;
+  *position: static;
+  *margin-top: auto;
+  width: 173px;
+  height: 44px;
+  background: url(http://photo.no5.com.cn/main/images/ms_nostart.jpg) no-repeat;
+  border: none;
+}
+
+.mlover {
+  position: absolute;
+  margin-top: 14px;
+  *position: static;
+  *margin-top: auto;
+  width: 106px;
+  height: 32px;
+  background: url(http://photo.no5.com.cn/main/images/ml_over.jpg) no-repeat;
+  border: none;
+}
+
+.mlnow {
+  position: absolute;
+  margin-top: 14px;
+  *position: static;
+  *margin-top: auto;
+  width: 106px;
+  height: 32px;
+  background: url(http://photo.no5.com.cn/main/images/ml_now.jpg) no-repeat;
+  border: none;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.mlnostart {
+  position: absolute;
+  margin-top: 14px;
+  *position: static;
+  *margin-top: auto;
+  width: 106px;
+  height: 32px;
+  background: url(http://photo.no5.com.cn/main/images/ml_nostart.jpg) no-repeat;
+  border: none;
+}
+
+.p1 {
+  vertical-align: middle;
+  margin-bottom: 5px;
+  _margin-top: 4px;
+}
+
+.textinput {
+  width: 30px;
+  height: 20px;
+  border: 1px solid #cdccc7;
+  margin: 0 4px;
+  text-align: center;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.tbico {
+  width: 22px;
+  text-align: center;
+}
+
+.n_neir {
+  float: left;
+  width: 417px;
+  height: 29px;
+}
+
+.n_neir a {
+  color: #4063a7;
+}
+
+.n_neir a:hover {
+  color: #fc7f0f;
+}
+
+.sp_user_count {
+  width: 120px;
+  height: 29px;
+  color: #333;
+  float: left;
+  text-align: right;
+}
+
+.magenta {
+  color: #fc7f0f;
+}
+
+#sp_xin_box {
+  width: 70px;
+  height: 13px;
+  float: left;
+  visibility: visible;
+}
+
+.sp_xin_line {
+  width: 72%;
+  height: 13px;
+  background: url(http://photo.no5.com.cn/main/images/xin_smallmid.jpg) repeat-x;
+}
+
+.star_rank {
+  position: absolute;
+  visibility: visible;
+  width: 70px;
+  height: 13px;
+  background: url(http://photo.no5.com.cn/main/images/xin_small.png) no-repeat;
+  z-index: 99;
+  margin-top: -14px;
+}
+
+#rvwbox {
+  display: none;
+  background: #edf8fe;
+  width: 763px;
+  border: 1px solid #ddecff;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+#rvwbox h3 {
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 14px;
+  color: #000;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+#quebox {
+  display: none;
+}
+
+#score {
+  padding-left: 40px;
+  padding-top: 10px;
+  width: 550px;
+}
+
+.substar {
+  width: 27px;
+  height: 26px;
+  background: url(http://photo.no5.com.cn/main/images/subbigxin1.jpg) no-repeat 0px 0px;
+  cursor: pointer;
+  display: block;
+  float: left;
+}
+
+.starGray {
+  background: url(http://photo.no5.com.cn/main/images/subbigxin1.jpg) no-repeat 0px -26px;
+}
+
+.star_tips {
+  display: block;
+  float: left;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.textdiv {
+  padding-left: 37px;
+  width: 700px;
+  *margin-bottom: 6px;
+}
+
+.textdiv h3 {
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 14px;
+  color: #000;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.textdiv .suc {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  _position: static;
+  padding: 5px 2px 4px 20px;
+  border: 1px solid #309103;
+  background: #eefee7 url(http://photo.no5.com.cn/main/images/bg/rgline.gif) no-repeat 0px -4px;
+  *background: #eefee7 url(http://photo.no5.com.cn/main/images/bg/rgline.gif) no-repeat 0px -2px;
+  color: #2d940e;
+}
+
+.textdiv .suc a {
+  color: #2d940e;
+}
+
+.xiangxi {
+  width: 345px;
+  float: left;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.xiangxi2 {
+  width: 720px;
+  float: left;
+  line-height: 24px;
+}
+
+/*第二部分*/
+.part02 {
+  width: 980px;
+  padding-top: 15px;
+}
+
+.p02_l {
+  float: left;
+  width: 200px;
+}
+
+.p02_r {
+  width: 765px;
+  float: right;
+  _overflow-x: hidden;
+}
+
+.box_tj {
+  width: 198px;
+  border: 1px solid #e4e4e4;
+  margin-top: 10px;
+}
+
+.title_tj {
+  width: 196px;
+  height: 33px;
+  line-height: 33px;
+  margin: 1px;
+  background: url(http://photo.no5.com.cn/main/images/p2lbg.jpg) repeat-x;
+  color: #333;
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.good_tj {
+  border-bottom: 1px dashed #e4e4e4;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.imgbox {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.textbox p {
+  line-height: 16px;
+}
+
+.good_rx {
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+.tl_img {
+  float: left;
+  width: 72px;
+  height: 72px;
+}
+
+.tl_text {
+  float: right;
+  width: 96px;
+  padding-top: 15px;
+}
+
+.tl_text p {
+  line-height: 16px;
+}
+
+.rx_name {
+  text-align: left;
+  width: 96px;
+  height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rx_price {
+  text-align: right;
+  margin-top: 6px;
+}
+
+.img_r {
+  float: right;
+  width: 72px;
+  height: 72px;
+}
+
+.zixun {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.zixun ul li {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px dashed #e4e4e4;
+}
+
+.zixun ul li a {
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.proname {
+  width: 176px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0px auto;
+}
+
+.goodname {
+  width: 120px;
+  height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alonepro {
+  width: 72px;
+  float: left;
+  margin: 13px;
+}
+
+.alonepro p {
+  text-align: center;
+  line-height: 16px;
+}
+
+/*第二部分右部*/
+.group {
+  width: 763px;
+  margin-bottom: 15px;
+  border: 1px solid #e4e4e4;
+  padding-bottom: 13px;
+  display: table;
+  background: #fff;
+}
+
+.grpTitle {
+  width: 740px;
+  text-align: left;
+  padding-left: 21px;
+}
+
+.grpTitle label {
+  display: inline-block;
+  margin-left: 10px;
+  color: #d11010;
+  text-decoration: underline;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.grpTitle .btnDis {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: default;
+}
+
+.goods_img {
+  margin-top: 16px;
+  float: left;
+  width: 446px;
+  border: 1px solid #f5debc;
+  height: 185px;
+  z-index: 1;
+}
+
+#groupFrame {
+  position: absolute;
+  width: 394px;
+  height: 185px;
+  margin-left: 25px;
+  overflow: hidden;
+}
+
+#goodsGroup {
+  position: absolute;
+  z-index: 0;
+  background: #fff;
+  height: 150px;
+}
+
+.goodprice .prodRedTxt,
+.boxFirst .prodRedTxt {
+  position: relative;
+  top: 2px;
+}
+
+.barSL {
+  position: absolute;
+  width: 13px;
+  height: 18px;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat -90px -330px;
+  margin-top: 75px;
+  margin-left: 9px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.gryBarSL {
+  background-position: -50px -330px;
+  cursor: default;
+}
+
+.barSR {
+  position: absolute;
+  width: 13px;
+  height: 18px;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat -110px -330px;
+  margin-top: 75px;
+  margin-left: 424px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.gryBarSR {
+  background-position: -70px -330px;
+  cursor: default;
+}
+
+.cuxiao {
+  float: left;
+  width: 480px;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1214) no-repeat 10px -384px;
+  padding: 0 10px;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin-bottom: 15px;
+}
+
+.cuxiao p {
+  line-height: 22px;
+  padding-left: 28px;
+}
+
+.cuxiao p a {
+  color: #fc7f0f;
+}
+
+.addche {
+  float: right;
+  width: 116px;
+  height: 30px;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.addche button {
+  border: none;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -354px;
+  width: 116px;
+  height: 30px;
+  float: right;
+  visibility: hidden;
+}
+
+.goodbox {
+  float: left;
+  width: 120px;
+  height: 175px;
+  margin: 8px 7px 8px 5px;
+  _margin-left: 4px;
+}
+
+.goodbox p {
+  line-height: 18px;
+}
+
+#groupBox .imgLoad31 {
+  background-position: 50% 30%;
+}
+
+.boxFirst {
+  margin: 27px 3px 5px 15px;
+  _margin-left: 8px;
+}
+
+.good_add {
+  width: 24px;
+  height: 24px;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -330px;
+  margin: 89px 15px 0 0px;
+  float: left;
+}
+
+.goodimg {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.goodprice {
+  text-align: center;
+}
+
+.goods_price {
+  float: right;
+  width: 137px;
+  padding-top: 45px;
+}
+
+.goods_price p {
+  padding-left: 18px;
+  line-height: 28px;
+}
+
+.goods_price .grpErr {
+  color: #b22222;
+  text-align: center;
+  margin-top: 5px;
+  display: none;
+}
+
+#grpSelLne {
+  padding-left: 0px;
+  text-align: center;
+}
+
+.goodtabs {
+  height: 34px;
+  border-bottom: 2px solid #78b5f4;
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+#tabBar {
+  position: static;
+  height: 34px;
+  background: #fff;
+  border-bottom: 2px solid #78b5f4;
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  width: 765px;
+}
+
+#tabBar ul li {
+  float: left;
+  display: block;
+  width: 140px;
+  background: url(http://photo.no5.com.cn/main/images/tabsbg.jpg) no-repeat;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#tabBar ul li a {
+  width: 140px;
+  display: block;
+  color: #333;
+}
+
+#tabBar ul li a:hover {
+  color: #fff;
+  display: block;
+  width: 140px;
+}
+
+#tabBar ul li.tabson {
+  display: block;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -262px;
+  width: 140px;
+  color: #fff;
+  height: 34px;
+  line-height: 34px;
+}
+
+#tabBar ul a:hover {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -262px;
+  width: 140px;
+  color: #fff;
+  height: 34px;
+  line-height: 34px;
+  display: block;
+}
+
+#tabBarR {
+  display: none;
+  height: 34px;
+  border-bottom: 2px solid #78b5f4;
+  width: 765px;
+}
+
+#tab_box_1 .loadtip {
+  display: block;
+  margin: 1px;
+  background: url(http://photo.no5.com.cn/main/images/loading.gif) no-repeat;
+  padding-left: 18px;
+  height: 11px;
+  line-height: 12px;
+}
+
+#con_two_1,
+#con_two_2,
+#con_two_3,
+#con_two_4,
+#con_two_5 {
+  padding-top: 10px;
+  line-height: 24px;
+}
+
+#det0 {
+  margin-top: 0;
+}
+
+.exp_img {
+  width: 765px;
+  padding-bottom: 8px;
+}
+
+.exp_text {
+  width: 750px;
+  padding: 0px 7px 0px 8px;
+}
+
+.exp_text h3 {
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 15px;
+  color: #333;
+  background: url(http://photo.no5.com.cn/main/images/hs_bg.jpg) no-repeat center bottom;
+  width: 734px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+
+.deTxt {
+  color: #aeaeae;
+  margin-left: 8px;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+.title_pl {
+  height: 30px;
+  line-height: 30px;
+  background: #78b5f4;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.more {
+  float: right;
+  margin-right: 20px;
+  font-family: 宋体, Arial, verdana, Helvetica;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.more a {
+  color: #ffffff;
+}
+
+.topj {
+  text-align: right;
+  margin-top: 7px;
+}
+
+.topj .err,
+.textdiv .err {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+  _position: static;
+  visibility: hidden;
+  padding: 5px 2px 4px 20px;
+  border: 1px solid #cf1602;
+  background: #ffe9e9 url(http://photo.no5.com.cn/main/images/bg/rgline.gif) no-repeat 0px -26px;
+  *background: #ffe9e9 url(http://photo.no5.com.cn/main/images/bg/rgline.gif) no-repeat 0px -24px;
+  color: #d11010;
+}
+
+.boxing {
+  float: left;
+  width: 230px;
+  padding-left: 20px;
+}
+
+.b_img {
+  width: 230px;
+  height: 180px;
+  margin-top: 10px;
+  background: url(http://photo.no5.com.cn/main/images/ldg_gry_31.gif) no-repeat 50% 50%;
+}
+
+.b_img img {
+  visibility: hidden;
+}
+
+.b_text {
+  line-height: 22px;
+}
+
+.pro_l {
+  float: left;
+  width: 370px;
+  text-align: center;
+}
+
+.pro_r {
+  float: left;
+  width: 330px;
+  padding-top: 80px;
+}
+
+.pro_r h2 {
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+.tzbox {
+  padding: 0 15px;
+}
+
+.dItmBox {
+  padding: 15px 0px;
+}
+
+/*查看大图页面*/
+.box_big {
+  width: 100%;
+  background: url(http://photo.no5.com.cn/main/images/namebg.jpg) repeat-x;
+  height: 84px;
+}
+
+.box01 {
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.b_01_l {
+  width: 800px;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  line-height: 18px;
+}
+
+.b_01_r {
+  width: 156px;
+  float: right;
+}
+
+.b_01_r a img {
+  width: 72px;
+  height: 30px;
+}
+
+.blist {
+  width: 800px;
+  float: left;
+}
+
+.slist {
+  width: 154px;
+  float: right;
+  border: 1px solid #a1cffe;
+}
+
+.s_title {
+  height: 38px;
+  line-height: 38px;
+  background: #cde6ff;
+  font-family: "微软雅黑", Arial, verdana, Helvetica;
+  font-size: 15px;
+  color: #00376e;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.picul {
+  width: 154px;
+}
+
+.pic_sli {
+  width: 122px;
+  height: 122px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: block;
+  margin-left: 15px;
+  float: left;
+  clear: left;
+}
+
+.pic_sli img {
+  width: 120px;
+  height: 120px;
+}
+
+.tobuy {
+  text-align: center;
+}
+
+/*floatButton*/
+#floatButtons {
+  position: fixed;
+  _position: absolute;
+  visibility: hidden;
+  width: 25px;
+  height: 89px;
+  cursor: hand;
+  cursor: pointer;
+}
+
+#floatButtons div {
+  margin-bottom: 2px;
+}
+
+/*floatButton*/
+.prodBtn1 {
+  border-width: 0px;
+  width: 140px;
+  height: 40px;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.prodBtn2 {
+  border-width: 0px;
+  width: 100px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+.prodBtn3 {
+  border-width: 0px;
+  width: 75px;
+  height: 29px;
+  vertical-align: middle;
+}
+
+.btnBuy {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat;
+}
+
+.btnFav {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -42px;
+}
+
+.btnOOS {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -84px;
+}
+
+.oosTxt {
+  font-weight: bold;
+  color: #f60;
+}
+
+#btnSaveRvw,
+#btnSaveQue {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -220px;
+}
+
+#btnRvw {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -162px;
+}
+
+#btnQue {
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1126) no-repeat 0px -191px;
+}
+
+.datu {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.datu a {
+  color: #4063a7;
+}
+
+/*share to*/
+.shareTxt {
+  position: relative;
+  top: 5px;
+}
+
+.spell {
+  width: 200px;
+  height: 19px;
+  margin: 0 auto 15px;
+}
+
+.spell span {
+  float: left;
+}
+
+.spell a {
+  float: left;
+  width: 22px;
+  height: 23px;
+  overflow: hidden;
+  background-image: url(http://photo.no5.com.cn/main/images/icon_site.gif);
+  background-repeat: no-repeat;
+  line-height: 100px;
+}
+
+a#site-qzone:link,
+a#site-qzone:visited {
+  background-position: 0 -24px;
+}
+
+a#site-qzone:hover,
+a#site-qzone:active {
+  background-position: 0 0;
+}
+
+#site-douban:link,
+#site-douban:visited {
+  background-position: -24px -24px;
+}
+
+#site-douban:hover,
+#site-douban:active {
+  background-position: -24px 0;
+}
+
+#site-renren:link,
+#site-renren:visited {
+  background-position: -47px -24px;
+}
+
+#site-renren:hover,
+#site-renren:active {
+  background-position: -47px 0;
+}
+
+#site-kaixing:link,
+#site-kaixing:visited {
+  background-position: -70px -24px;
+}
+
+#site-kaixing:hover,
+#site-kaixing:active {
+  background-position: -70px 0;
+}
+
+#site-sina:link,
+#site-sina:visited {
+  background-position: -93px -24px;
+}
+
+#site-sina:hover,
+#site-sina:active {
+  background-position: -93px 0;
+}
+
+#site-email:link,
+#site-email:visited {
+  background-position: -116px -24px;
+}
+
+#site-email:hover,
+#site-email:active {
+  background-position: -116px 0;
+}
+
+#site-qq:link,
+#site-qq:visited {
+  background-position: -162px -24px;
+}
+
+#site-qq:hover,
+#site-qq:active {
+  background-position: -162px 0;
+}
+
+#site-qz:link,
+#site-qz:visited {
+  background-position: -139px -24px;
+}
+
+#site-qz:hover,
+#site-qz:active {
+  background-position: -139px 0;
+}
+
+/*share to */
+#btnGrpBuy {
+  margin-top: 10px;
+  background: url(http://photo.no5.com.cn/main/images/btnGroup.gif?1213) no-repeat 0px -127px;
+  width: 110px;
+  height: 33px;
+  margin-left: 12px;
+  border: none;
+}
+
+#sPriVL .flash_sale {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  background: #cd0000;
+  padding: 0 2px;
+  color: white;
+  font-weight: normal;
+  height: 19px;
+  line-height: 19px;
+}
+
+#sPriVL .remain_time {
+  margin-left: 15px;
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#tab_box_0 .exp_img img {
+  height: auto;
+  width: 750px;
+}
+
+#tab_box_0 .dItmBox > div > p > img {
+  height: auto;
+  width: 750px;
+}
+
+#tab_box_0 .dItmBox > div > table {
+  width: 750px;
+}
+
+#tab_box_0 .dItmBox > div > table td {
+  font-size: 12px;
+}
+
+#tab_box_0 .dItmBox > div > table td strong {
+  font-size: 12px;
+  color: #cc1043;
+}
+
+#tab_box_0 .dItmBox > div > table td var {
+  color: #cc1043;
+  font-size: 12px;
+  font-style: normal;
+}
+
+#tab_box_0 .dItmBox > div > dl {
+  width: 750px;
+}
+
+#tab_box_0 .dItmBox > div > dl dd {
+  font-size: 12px;
+  width: 750px;
+}
+
+#tab_box_0 .dItmBox > div > dl dd img {
+  width: 750px;
+  height: auto;
+}
