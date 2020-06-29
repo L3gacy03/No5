@@ -3,14 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>我的购物车</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/goodsShopcar.css">
     <script src='../js/require.js' async='true' defer data-main='../js/goodsShopcar/main'></script>
 </head>
 <body>
-    <script src="../js/common/header.js"></script>
-    <script src="../js/common/footer.js"></script>
+    <div id="antpmt" class="antpmt">输入新的数量值后，按回车键或单击文本框以外的区域即可完成修改数量的操作。</div>
+    <div id="pro_tip"></div>
+    <div id="cart_tip"></div>
+    <div id="cartShadow"></div>
+    <div id="cartShadow2"></div>
+    <div id="cartSuc">
+        <div class="title">提示<a href="javascript:;">×</a></div>
+        <div class="content"><span id="sucMsg">商品已成功加入购物车！</span><br /><a href="javascript:;">查看购物车</a></div>
+        <div id="sucCD"></div>
+    </div>
+    <div id="cart-wrap">
+        <div class="cart-head">
+            <ul class="cart-nav">
+                <li><a href="javascript:;">收藏夹</a></li>
+                <li><a href="javascript:;">新会员注册</a>/<a href="javascript:;"
+                       >登录</a></li>
+                <li><a href="javascript:;">我的帐户</a></li>
+                <li><a href="javascript:;" title="No5" >收藏本站</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+        <div id="cart_err0"></div>
+        <div id="divCartList" class="cart-date">
+            <form name="frmcart" style="margin:0px;"><input type="hidden" name="act" value="upd" />
+                <table width="948" cellspacing="0" id="tbShoppingList">
+                    <tr class="cart-tip">
+                        <td width="36" height="33">序号</td>
+                        <td width="554" height="33">商品名称</td>
+                        <td width="41">规格</td>
+                        <td width="49">一般价</td>
+                        <td width="47">No5价</td>
+                        <td width="29">数量</td>
+                        <td width="59">付款小计</td>
+                        <td width="70">转入收藏夹</td>
+                        <td width="45">删除</td>
+                    </tr>
+                    <tr id="record_6147933" class="gray-border">
+                        <td><input type="hidden" name="productid_1">1</td>
+                        <td>
+                            <div align="left"><a href="javascript:;">Clinique
+                                    倩碧温和液体洁面皂/洗面奶(适合混合偏干性肌肤6F37)</a></div>
+                        </td>
+                        <td>200ml</td>
+                        <td>185</td>
+                        <td id="price_6147933">148</td>
+                        <td>
+                            <input type="text" name="amount_1" value="1" maxlength="3" class="ctlAnt antn"/>
+                            <input type="hidden" value="1" />
+                            <input type="hidden" value="3117" />
+                        </td>
+                        <td id="subtotal_6147933">148</td>
+                        <td><a href="javascript:;" id="btnfav1">转入收藏夹</a>
+                        </td>
+                        <td width="45"><a id="btnDel_6147933" href="javascript:;">删除</a></td>
+                    </tr>
+                </table>
+            </form>
+            <div id="divM" class="amount" style="display:none">商品总金额：<span id="numPM"
+                    class="font-red">￥1390</span>元<span id="spanCouponText" style="display:none;">－商品兑换券：<span
+                        id="numVM" class="font-red">￥0</span>元</span><span id="spanZJText"
+                    style="display:none;">－直减金额：<span id="numZJ" class="font-red">￥0</span>元</span></div>
+            <div class="amount"><strong>应付商品金额：<span id="numPM2" class="font-red">￥1390</span>元</strong></div>
+            <div class="amount"></div>
+            <div id="cartErr"></div>
+        </div>
+        <div class="cart-area">
+            <div class="cart-btn-dle">
+                输入兑换券帐号：<input type="text" name="dhqAccount" id="dhqAccount" maxlength="20"
+                    onblur="javascript:cTrim(this, 0);" />
+                <div id="divExchange"></div>
+                <input id="btnExchange" type="button" value="兑换商品" onclick="javascript:btnExchangeClick(this);" />
+            </div>
+            <div style="float:left;position:relative;top:5px;"><a href="javascript:;">
+                <img src="http://www.no5.com.cn/images/icon-dle.png" style="margin-right:5px" /><span>清空购物车</span></a></div>
+            <div class="cart-btn"><a href="javascript:;" onclick="javascript:continueShopping();"><img
+                        src="http://www.no5.com.cn/images/btn-go-on.png" /></a></div>
+            <div class="cart-btn"> <a href="javascript:GoBalance();"><img src="http://www.no5.com.cn/images/btn-go-sett.png"
+                        /></a></div>
+        </div>
+        <div id="thpList" class="special-area" style="display:none;">
+        </div>
+        <div class="clearfix"></div>
+    </div>
 </body>
 </html>
