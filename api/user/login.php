@@ -4,7 +4,6 @@ include('./config.php');
 
 $username = $_POST['username'];
 $pwd = $_POST['pwd'];
-$email = $_POST['email'];
 
 // 查询数据库里是否存在用户名和密码一致的用户名
 $sql = "select * from user where username='$username' and pwd='$pwd'";

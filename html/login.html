@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>登录NO5时尚广场</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../libs/md5.js"></script>
     <script src='../js/require.js' async='true' defer data-main='../js/login/main'></script>
 </head>
 
@@ -31,20 +32,22 @@
                     <div class="input">
                         <div class="width60"><span>码：</span><span class="width24"></span><span>密</span></div>
                         <input type="password" name="password" maxlength="20" class="fixlogininput" />&nbsp;<a
-                            href="/forget_password.asp">忘记密码？</a>
+                            href="javascript:;">忘记密码？</a>
                         <div id="txtLoginPasswordChkMsg" class="tip reg_errmsg"></div>
                     </div>
                     <div id="divVerifyCode" display="block" class="input">
                         <div class="width60">验 证 码：</div>
                         <input name="verifyCode" maxlength="4" class="testcode" />
-                        <img id="VcodeImage_Login" src="" />
+                        <canvas width="240" height="90" id="captcha"></canvas>
                         <div id="txtLoginVerifyCodeChkMsg" class="tip reg_errmsg"></div>
                     </div>
+                    <div class="input nologin">
+                        <label>
+                            <input type="checkbox" id="noLogin">七天免登陆
+                        </label>
+                    </div>
                     <div class="input">
-                        <div id="login-btn"><input type="image" id="btnLogin"
-                                src="http://www.no5.com.cn/images/btn-login.png" />
-                            <div id="login_loading"><img src="" /><span id="login_loading_msg">
-                                    正在登录,请稍候...</span></div>
+                        <div id="login-btn"><input type="image" id="btnLogin" src="http://www.no5.com.cn/images/btn-login.png" />
                         </div>
                     </div>
                     <div>

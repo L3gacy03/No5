@@ -1,6 +1,24 @@
 define(["jquery", "jquery-cookie"], function ($) {
     // header & footer
     function common() {
+        // 找到cookie
+        let username = $.cookie('username');
+        if(username){
+            // console.log(username);
+            $('.head-welcome b').text(username);
+            $('.head-welcome span').html('<a href="javascript:;" id="exit">[退出]</a>');
+        }else{
+            $('.head-welcome b').text('欢迎光临No5时尚广场');
+        }
+        // 点击退出时, 清空cookie
+        $('#exit').click(function () {
+            if (confirm('确认退出吗?')) {
+                $.cookie('username', '', { expires: -1, path: '/' });
+                $('.head-welcome b').text('欢迎光临No5时尚广场');
+                $('.head-welcome span').html('[<a href="./html/login.html">登录</a>] [<a href="./html/register.html">免费注册</a>]');
+            }
+        });
+
         // 渲染商品导航栏
         $.ajax({
             type: 'GET',

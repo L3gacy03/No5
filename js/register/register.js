@@ -1,9 +1,9 @@
 define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
     function bindEvent() {
-        $('#txtRegUserName').val('123qwe');
-        $('#txtRegPassword').val('123qwe');
-        $('#txtRePassword').val('123qwe');
-        $('#txtEmail').val('774187452@qq.com');
+        // $('#txtRegUserName').val('123qwe');
+        // $('#txtRegPassword').val('123qwe');
+        // $('#txtRePassword').val('123qwe');
+        // $('#txtEmail').val('774187452@qq.com');
 
         // 用户名
         $('#txtRegUserName').focus(function () {
@@ -12,10 +12,10 @@ define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
             // 用户名的长度应为3～30个字符之间(汉字占两个字符)！
             let reg = /^[@\u4E00-\u9FA5A-Za-z0-9_-]{3,30}$/;
             let val = $.trim($(this).val());
-            verReg(reg, val, $(this), '用户名的长度应为3～30个字符之间(汉字占两个字符)！');
             if($(this).val() == ''){
                 verForm($(this), '3~30位, 由汉字、字母、数字、点、减号、下划线及"@"组成');
             }
+            verReg(reg, val, $(this), '用户名的长度应为3～30个字符之间(汉字占两个字符)！');
         });
         // 密码
         $('#txtRegPassword').focus(function () {
@@ -74,7 +74,7 @@ define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
         }); 
         // 传值
         captcha.draw(document.querySelector('#captcha'), r => {
-            // console.log('验证码', r);
+            console.log('验证码', r);
             imgCode = r;
             // 自动触发标签的事件
             $('#txtVerifyCode').trigger('blur');
@@ -101,12 +101,12 @@ define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
         });
 
         // 注册
-        $('#btnUserRegSubmit').click(function (e) {
+        $('#btnUserRegSubmit').click(function () {
             $('#txtRegUserName,#txtRegPassword,#txtRePassword,#txtEmail,#txtVerifyCode').trigger('blur');
 
             if(!$('#frmUserRegister .tip').hasClass('reg_errmsg') && $('#reg-proto').is(':checked')){
                 // 获取用户名和密码
-                let data = {
+                let user = {
                     username: $.trim($('#txtRegUserName').val()),
                     pwd: md5($.trim($('#txtRegPassword').val())).slice(0, 15),
                     email: $.trim($('#txtEmail').val())
@@ -115,20 +115,24 @@ define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
                 $.ajax({
                     type: "POST",
                     url: "../api/user/register.php",
-                    data,
+                    data: user,
                     dataType: "json"
                 }).done(data => {
                     // console.log(data);
                     if(data.code == 1){
                         alert(data.msg);
                         location.replace('./login.html');
+                    }else if(data.code == 2){
+                        alert(data.msg);
+                    }else{
+                        alert(data.msg);
                     }
                 });
             }else if(!$('#reg-proto').is(':checked')){
                 alert("请阅读并同意用户的注册协议!!!");
             }
 
-            e.preventDefault();
+            return false;
         })
     }
 

@@ -9,6 +9,7 @@ require.config({
         //自定义的模块名字: 模块的路径
         "jquery": "../../libs/jquery-1.10.1.min",
         "jquery-cookie": "../../libs/jquery.cookie",
+        "captcha": "../../libs/captcha",
         "common": "../common/common",
         "login": "login"
     },
@@ -23,4 +24,5 @@ require.config({
 // 异步运行
 require(["common", "login"], function (common, login) {
     common.common();
+    login.bindEvent();
 })

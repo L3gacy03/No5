@@ -186,6 +186,16 @@
   text-decoration: underline;
 }
 
+.nologin {
+  text-align: left;
+  margin-left: 190px;
+  height: 30px;
+}
+
+.nologin input {
+  vertical-align: middle;
+}
+
 .width60 {
   width: 60px;
   height: 25px;
@@ -340,6 +350,14 @@
 
 #divVerifyCode {
   display: block;
+  position: relative;
+}
+
+#captcha {
+  width: 110px;
+  position: absolute;
+  top: -14px;
+  left: 120px;
 }
 
 #lyrMask {

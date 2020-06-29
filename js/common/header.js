@@ -12,7 +12,7 @@ document.writeln("                    <dd>客服</dd>");
 document.writeln("                </dl>");
 document.writeln("            </div>");
 document.writeln("            <ul class=\'head-welcome\'>");
-document.writeln("                <li>下午好，欢迎光临No5时尚广场。<span>[<a href=\'./login.html\'>登录</a>] [<a href=\'./register.html\'>免费注册</a>]</span></li>");
+document.writeln("                <li>您好，欢迎光临No5时尚广场。<span>[<a href=\'./login.html\'>登录</a>] [<a href=\'./register.html\'>免费注册</a>]</span></li>");
 document.writeln("            </ul>");
 document.writeln("            <ul class=\'user-control\'>");
 document.writeln("                <li class=\'hide\'><a href=\'javascript:;\' class=\'\'>我的账户</a><b></b>");
