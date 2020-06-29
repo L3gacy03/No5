@@ -8,7 +8,7 @@
 mysql_connect('localhost', 'root', 'root');
 
 // 选择数据库
-mysql_select_db('meizu');
+mysql_select_db('no5');
 
 // 这两句设置编码, 直接使用
 mysql_query('set charset "utf8"');

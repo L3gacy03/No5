@@ -209,6 +209,18 @@
   height: 20px;
   width: 180px;
   float: left;
+  position: relative;
+}
+
+#captcha {
+  width: 110px;
+  position: absolute;
+  top: -14px;
+  left: 120px;
+}
+
+#txtVerifyCodeChkMsg {
+  width: 130px;
 }
 
 .testcode {

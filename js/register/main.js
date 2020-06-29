@@ -9,6 +9,8 @@ require.config({
         //自定义的模块名字: 模块的路径
         "jquery": "../../libs/jquery-1.10.1.min",
         "jquery-cookie": "../../libs/jquery.cookie",
+        "captcha": "../../libs/captcha",
+        "md5": "../../libs/md5",
         "common": "../common/common",
         "register": "register"
     },
