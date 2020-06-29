@@ -44,6 +44,17 @@ define(["jquery", "jquery-cookie"], function ($) {
             });
         });
 
+        // 商品数量添加和减少按钮
+        let goodsNum = 1;
+        $('#boxBuy span img:first').click(function () {
+            goodsNum --;
+            if(goodsNum < 1) goodsNum = 1;
+            $('#buyAnt').val(goodsNum);
+        });
+        $('#boxBuy span img:last').click(function () {
+            goodsNum ++;
+            $('#buyAnt').val(goodsNum);
+        });
     }
 
     return {
