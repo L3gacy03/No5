@@ -23,4 +23,5 @@ require.config({
 // 异步运行
 require(["common", "goodsDetail"], function (common, goodsDetail) {
     common.common();
+    goodsDetail.bindEvent();
 })
