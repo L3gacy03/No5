@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,70 @@
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
     <script src='../js/require.js' async='true' defer data-main='../js/login/main'></script>
 </head>
+
 <body>
     <script src="../js/common/header.js"></script>
+
+    <div id="wrapper">
+        <div class="gray_border_box">
+            <div class="log-reg-box">
+                <div class="log-tit"></div>
+                <form name="frmUserLogin" id="frmUserLogin" autocomplete="off">
+                    <input type="hidden" name="requestVC" value="0" />
+                    <input type="hidden" name="vcTag" value="login" />
+                    <input type="hidden" name="returnurl" value="" />
+                    <div class="input">
+                        <div class="width60">用 户 名：</div>
+                        <input type="text" name="userName" maxlength="30" class="fixlogininput" />
+                        <div class="tip reg_errmsg"></div>
+                    </div>
+                    <div class="input">
+                        <div class="width60"><span>码：</span><span class="width24"></span><span>密</span></div>
+                        <input type="password" name="password" maxlength="20" class="fixlogininput" />&nbsp;<a
+                            href="/forget_password.asp">忘记密码？</a>
+                        <div id="txtLoginPasswordChkMsg" class="tip reg_errmsg"></div>
+                    </div>
+                    <div id="divVerifyCode" display="block" class="input">
+                        <div class="width60">验 证 码：</div>
+                        <input name="verifyCode" maxlength="4" class="testcode" />
+                        <img id="VcodeImage_Login" src="/VerifyCode.asp?tag=7131535171&location=login" />
+                        <div id="txtLoginVerifyCodeChkMsg" class="tip reg_errmsg"></div>
+                    </div>
+                    <div class="input">
+                        <div id="login-btn"><input type="image" id="btnLogin"
+                                src="http://www.no5.com.cn/images/btn-login.png" />
+                            <div id="login_loading"><img src="/images/login-loader.gif" /><span id="login_loading_msg">
+                                    正在登录,请稍候...</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-left:50px;">
+                            <div style="width:100%; height:30px; line-height:30px; font-size: 12px; color:#666;">
+                                使用合作网站账号登录NO5时尚广场
+                            </div>
+                            <div style="width:100%; height:30px; ">
+                                <a href="javascript:;">
+                                    <img src="http://www.no5.com.cn/images/union_alipay.jpg" alt="使用支付宝帐号登录" />
+                                </a>
+                                <a href="javascript:;">
+                                    <img src="http://www.no5.com.cn/images/union_qq.jpg" alt="使用QQ帐号登录" />
+                                </a>
+                                <a href="javascript:;">
+                                    <img src="http://www.no5.com.cn/images/union_360.jpg" alt="使用360帐号登录"
+                                        style="margin-left: 6px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="../js/common/footer.js"></script>
 </body>
+
 </html>

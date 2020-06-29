@@ -35,7 +35,7 @@ document.writeln("    </div>");
 document.writeln("    <div class=\'headbox\'>");
 document.writeln("        <div class=\'logo\'>");
 document.writeln("            <a href=\'../index.html\'>");
-document.writeln("                <img src=\'http://photo.no5.com.cn/page_2014/images/logo.jpg?v=20140625\' />");
+document.writeln("                <img src=\'../images/common/logo.jpg\' />");
 document.writeln("            </a>");
 document.writeln("        </div>");
 document.writeln("        <div class=\'searchbox\'>");

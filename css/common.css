@@ -6,7 +6,7 @@
   padding: 0;
   width: 100%;
   height: 33px;
-  background: url(http://photo.no5.com.cn/page_2014/images/headbg.jpg) repeat-x;
+  background: url(../images/common/headbg.jpg) repeat-x;
   font-family: simsun, arial, Arial Narrow, serif;
 }
 
@@ -37,7 +37,7 @@
   right: 8px;
   width: 7px;
   height: 4px;
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat -252px -30px;
+  background: url(../images/common/detail.gif) no-repeat -252px -30px;
   position: absolute;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@
   height: 13px;
   top: 9px;
   left: 7px;
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat -269px -30px;
+  background: url(../images/common/detail.gif) no-repeat -269px -30px;
   position: absolute;
   overflow: hidden;
 }
@@ -159,7 +159,7 @@
 .headbox .search {
   width: 428px;
   height: 30px;
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0 -521px;
+  background: url(../images/common/detail.gif) no-repeat 0 -521px;
   border: 2px solid #02a3f0;
 }
 
@@ -214,7 +214,7 @@
 }
 
 .headbox .shoppingcart .trigger {
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0px -30px;
+  background: url(../images/common/detail.gif) no-repeat 0px -30px;
   display: block;
   font-size: 12px;
   padding-left: 70px;
@@ -330,11 +330,11 @@
   text-align: center;
   color: #fff;
   margin: 5px 10px 10px;
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0 -206px;
+  background: url(../images/common/detail.gif) no-repeat 0 -206px;
 }
 
 .headbox .shoppingcart:hover .trigger {
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0px -74px;
+  background: url(../images/common/detail.gif) no-repeat 0px -74px;
   height: 42px;
   line-height: 43px;
   padding-top: 1px;
@@ -380,7 +380,7 @@
 /*导航*/
 .mainnav {
   width: 100%;
-  background: url(http://photo.no5.com.cn/page_2014/images/navbg.jpg) repeat-x;
+  background: url(../images/common/navbg.jpg) repeat-x;
   height: 40px;
   clear: both;
 }
@@ -400,7 +400,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0 -117px;
+  background: url(../images/common/detail.gif) no-repeat 0 -117px;
   z-index: 2;
 }
 
@@ -424,7 +424,7 @@
 .navbox .subnav ul li {
   float: left;
   padding: 0 30px;
-  background: url(http://photo.no5.com.cn/page_2014/images/navlibg.jpg) no-repeat left center;
+  background: url(../images/common/navlibg.jpg) no-repeat left center;
 }
 
 .navbox .subnav ul li a {
@@ -620,7 +620,7 @@
   position: absolute;
   top: 17px;
   right: 15px;
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat -310px -30px;
+  background: url(../images/common/detail.gif) no-repeat -310px -30px;
   width: 6px;
   height: 9px;
 }
@@ -630,7 +630,7 @@
   float: left;
   width: 100%;
   height: 200px;
-  background: url(http://photo.no5.com.cn/page_2014/images/f_03.jpg) repeat-x;
+  background: url(../images/common/f_03.jpg) repeat-x;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   margin: 30px auto;
@@ -649,7 +649,7 @@
 }
 
 .footer .f-cont .f-info .tel {
-  background: url(http://photo.no5.com.cn/page_2014/images/detail.gif?v=20140610) no-repeat 0 -157px;
+  background: url(../images/common/detail.gif) no-repeat 0 -157px;
   height: 49px;
   width: 197px;
 }
@@ -671,7 +671,7 @@
 }
 
 .footer .f-cont .f-info .weibo {
-  background: url(http://photo.no5.com.cn/page_2014/images/w.jpg) no-repeat;
+  background: url(../images/common/w.jpg) no-repeat;
   width: 197px;
   height: 22px;
   line-height: 22px;
@@ -741,7 +741,7 @@
   padding-top: 11px;
   padding-left: 33px;
   float: left;
-  background: url(http://photo.no5.com.cn/page_2014/images/ss.jpg) no-repeat 30px 104px;
+  background: url(../images/common/ss.jpg) no-repeat 30px 104px;
   width: 125px;
   height: 150px;
 }
@@ -814,7 +814,7 @@
   width: 22px;
   height: 21px;
   overflow: hidden;
-  background: url(http://photo.no5.com.cn/page_2014/images/kf.jpg) no-repeat 0 -24px;
+  background: url(../images/common/kf.jpg) no-repeat 0 -24px;
   margin: 0 auto;
 }
 
@@ -838,7 +838,7 @@
   width: 22px;
   height: 24px;
   overflow: hidden;
-  background: url(http://photo.no5.com.cn/page_2014/images/kf.jpg) no-repeat 0 0;
+  background: url(../images/common/kf.jpg) no-repeat 0 0;
   margin: 0 auto;
 }
 
@@ -858,7 +858,7 @@
 
 #qrcode-box {
   position: absolute;
-  background: url(http://photo.no5.com.cn/page/common/qrcode-app-80.png?4) no-repeat;
+  background: url(../images/common/qrcode-app.png) no-repeat;
   width: 80px;
   height: 80px;
   margin-left: 500px;
@@ -879,7 +879,7 @@
 }
 
 #mobile-menu .app {
-  background: url(http://photo.no5.com.cn/page/common/qrcode-app-80.png?4) no-repeat;
+  background: url(../images/common/qrcode-app.png) no-repeat;
   height: 90px;
   border-bottom: 1px solid #ccc;
   padding-left: 85px;
@@ -890,7 +890,7 @@
   width: 25px;
   height: 25px;
   display: inline-block;
-  background: url(http://photo.no5.com.cn/page/common/mobile-system.png) no-repeat;
+  background: url(../images/common/mobile-system.png) no-repeat;
   margin-right: 5px;
   margin-top: 5px;
 }
@@ -900,7 +900,7 @@
 }
 
 #mobile-menu .gzh {
-  background: url(http://photo.no5.com.cn/page/common/qrcode-gzh-80.jpg) no-repeat 0px 10px;
+  background: url(../images/common/qrcode-gzh.jpg) no-repeat 0px 10px;
   height: 80px;
   padding-top: 13px;
   padding-left: 85px;
