@@ -199,7 +199,55 @@ define(["jquery", "jquery-cookie"], function ($) {
         });
     }
 
+    function shopcarRender() {
+        let userId = $.cookie("userId") || "";
+        let username = $.cookie("username") || "";
+        // console.log(userId, username);
+
+        if(userId && username){
+            $.ajax({
+                url: "./api/server/getCart.php",
+                data: { userId },
+                dataType: "json"
+            }).done(data => {
+                console.log(data);
+                let html = data.map(item => {
+                    return `
+                    <dl>
+                        <dt>
+                            <a href="javascript:;">
+                                <img src="${item.imgUrl}">
+                            </a>
+                        </dt>
+                        <dd class="pro-name">
+                            <a href="javascript:;">${item.title}</a>
+                        </dd>
+                        <dd class="pro-price">
+                            ￥${item.price}×${item.num}<a href="javascript:;">删除</a>
+                        </dd>
+                    </dl>
+                    `;
+                }).join('');
+                let sum = 0;
+                let goodsNum = 0;
+                for (let i = 0; i < data.length; i++) {
+                    sum += data[i].price * data[i].num;
+                    goodsNum += parseInt(data[i].num);
+                }
+                html += `
+                    <div class="sum">
+                        <p>共<b>${goodsNum}</b>件商品　　金额总计：<em>￥${sum}</em></p>
+                        <a href="./html/goodsShopcar.html">去购物车结算</a>
+                    </div>
+                `;
+                $('.shoplist').html(html);
+                // 更新购物车数量
+                $('.trigger strong').text(goodsNum);
+            });
+        }
+    }
+
     return {
-        common,content
+        common,content,shopcarRender
     }
 });

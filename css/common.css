@@ -259,6 +259,10 @@
   float: left;
 }
 
+.headbox .shoppingcart:hover .shoplist dl dt img {
+  width: 100%;
+}
+
 .headbox .shoppingcart:hover .shoplist dl dd {
   float: left;
   height: 40px;

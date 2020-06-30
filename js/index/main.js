@@ -23,4 +23,5 @@ require.config({
 require(["index"], function (index) {
     index.common();
     index.content();
+    index.shopcarRender();
 })
