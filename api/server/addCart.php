@@ -27,6 +27,6 @@ if($num == 0){
   if (!$retval) {
     die('添加到购物车失败: ' . mysqli_error($conn));
   }
-  echo "已成功加入购物车！";
+  echo "商品已成功加入购物车！";
 
 ?>

@@ -189,6 +189,8 @@ ul {
 }
 
 .gray-border {
+    height: 32px;
+
     td {
         border-bottom-width: 1px;
         border-bottom-style: dashed;
@@ -217,38 +219,6 @@ ul {
 .font-red {
     color    : #ff0000;
     font-size: 12px;
-}
-
-.salesp {
-    margin-top         : 15px;
-    border             : 1px solid #ff9900;
-    padding-top        : 8px;
-    padding-right      : 8px;
-    padding-bottom     : 8px;
-    padding-left       : 100px;
-    line-height        : 16px;
-    background-image   : url(/images/salesp-bg.png);
-    background-repeat  : no-repeat;
-    background-position: left top;
-    font-family        : "宋体";
-    width              : 840px;
-
-    a {
-        &:link {
-            color          : #ff0000;
-            text-decoration: none;
-        }
-
-        &:visited {
-            color          : #ff0000;
-            text-decoration: none;
-        }
-
-        &:hover {
-            color          : #ff0000;
-            text-decoration: underline;
-        }
-    }
 }
 
 .cart-area {
@@ -288,94 +258,6 @@ ul {
     text-align: right;
 }
 
-.special-area {
-    margin-top         : 40px;
-    background-image   : url(/images/sa-bg1.png);
-    background-repeat  : no-repeat;
-    background-position: left top;
-    border-right-width : 3px;
-    border-bottom-width: 3px;
-    border-left-width  : 3px;
-    border-right-style : solid;
-    border-bottom-style: solid;
-    border-left-style  : solid;
-    border-right-color : #d3f1fd;
-    border-bottom-color: #d3f1fd;
-    border-left-color  : #d3f1fd;
-    padding-top        : 45px;
-    padding-bottom     : 15px;
-    _padding-bottom    : 0px;
-}
-
-.single-area {
-    width            : 280px;
-    background-image : url(/images/single-sa-bg.png);
-    background-repeat: no-repeat;
-    margin-top       : 0px;
-    margin-right     : 0px;
-    margin-bottom    : 0px;
-    margin-left      : 26px;
-    padding          : 0px;
-    float            : left;
-}
-
-.special-list {
-    display: block;
-    margin : 0px;
-    padding: 9px;
-    border : 1px solid #e1e1e1;
-
-    a {
-        &:link {
-            color          : #666666;
-            text-decoration: none;
-        }
-
-        &:visited {
-            color          : #666666;
-            text-decoration: none;
-        }
-
-        &:hover {
-            color          : #ff9900;
-            text-decoration: underline;
-        }
-    }
-
-    li {
-        padding        : 0px;
-        list-style-type: none;
-        line-height    : 16px;
-        margin-top     : 5px;
-        margin-right   : 0px;
-        margin-bottom  : 5px;
-        margin-left    : 0px;
-        font-family    : "宋体";
-    }
-}
-
-.btn-sp-add {
-    padding-left: 23px;
-    padding-top : 3px;
-}
-
-.single-area-title {
-    height     : 33px;
-    font-size  : 14px;
-    line-height: 33px;
-    color      : #048ddb;
-    text-align : center;
-}
-
-.font-orange {
-    color      : #ff6600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.single-area-wrap {
-    margin-bottom: 15px;
-}
-
 form {
     margin: 0px;
 }
@@ -397,47 +279,6 @@ form {
     border          : 1px solid #d3e2fa;
 }
 
-.cart_wait {
-    white-space     : nowrap;
-    font-size       : 12px;
-    position        : absolute;
-    padding         : 2px;
-    background      : url(../images/l2.gif) no-repeat 2px 2px;
-    background-color: #aafeff;
-    padding-left    : 20px;
-    visibility      : hidden;
-}
-
-.cart_worksuc {
-    position        : absolute;
-    padding         : 5px;
-    width           : 50px;
-    background-color: #d7f4da;
-    border          : 1px solid #2a8350;
-    visibility      : hidden;
-    white-space     : nowrap;
-    font-size       : 12px;
-}
-
-.carterr {
-    width           : 99%;
-    margin          : auto;
-    height          : 50px;
-    line-height     : 50px;
-    font-size       : 14px;
-    text-align      : center;
-    border          : 1px solid #ffba9f;
-    background-color: #ffffe3;
-    width           : 99%;
-    margin          : auto;
-    height          : 50px;
-    line-height     : 50px;
-    font-size       : 14px;
-    text-align      : center;
-    border          : 1px solid #ffba9f;
-    background-color: #ffffe3;
-}
-
 .antpmt {
     position        : absolute;
     visibility      : hidden;
@@ -448,56 +289,6 @@ form {
     opacity         : 0.85;
     white-space     : nowrap;
     font-size       : 12px;
-}
-
-#tipCartMoney {
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color      : Red;
-}
-
-#antupdtip {
-    font-size       : 12px;
-    text-align      : center;
-    position        : absolute;
-    visibility      : visible;
-    border          : 1px solid #f2a251;
-    background-color: #fff9b0;
-    line-height     : 20px;
-    padding         : 5px;
-    opacity         : 0.85;
-    visibility      : hidden;
-    z-index         : 100;
-
-    a {
-        text-decoration: none;
-    }
-}
-
-.anth {
-    background-color: #cafeff;
-    border          : 1px solid #00008b;
-}
-
-.urlerr {
-    width           : 90%;
-    margin          : auto;
-    border          : 1px solid #8b0000;
-    background-color: #fff5bb;
-    text-align      : center;
-    margin-top      : 50px;
-    height          : 50px;
-    line-height     : 50px;
-    color           : #8b0000;
-    font-size       : 14px;
-}
-
-.pstamp {
-    margin-right    : 3px;
-    background-color: #bd0000;
-    color           : #ffffbb;
-    padding-top     : 1px;
-    padding-left    : 1px;
 }
 
 #pro_tip {
@@ -543,38 +334,6 @@ form {
     display: none;
 }
 
-#cart_err0 {
-    display         : none;
-    padding         : 10px;
-    background-color: #fff8ce;
-    border          : 1px solid #a0522d;
-    margin-bottom   : 2px;
-    font-size       : 12px;
-
-    li {
-        list-style-type: none;
-        margin-left    : 0px;
-    }
-}
-
-.LineGray {
-    background-color: #e6e6e6;
-}
-
-.LineYellow {
-    background-color: #fff09b;
-}
-
-.LineRed {
-    background-color: #ffa595;
-}
-
-#divExchange {
-    visibility: hidden;
-    position  : absolute;
-    color     : #ff0000;
-}
-
 #btnExchange {
     font-size: 12px;
     padding  : 1px;
@@ -586,5 +345,5 @@ form {
     font-weight   : bold;
     font-family   : Verdana, Arial, sans-serif;
     width         : 160px;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
