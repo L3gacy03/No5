@@ -1,13 +1,14 @@
 define(["jquery", "jquery-cookie"], function ($) {
     function goodsListRender() {
-        $.ajax({
+        let success = $.ajax({
             type: "GET",
-            url: "../api/getJSON/goodsList.php",
-            success(data) {
+            url: "../api/getJSON/goodsList.php"
+        });
+        success.done(data => {
                 // console.log(data);
                 let html = data.map(item => {
                     return `
-                    <dl>
+                    <dl data-id="${item.goodsId}">
                         <dt>
                             <a href="javascript:;">
                                 <img src="${item.imgUrl}" width="200" height="200" />
@@ -28,11 +29,9 @@ define(["jquery", "jquery-cookie"], function ($) {
                     `;
                 }).join('');
                 $('#cplist').html(html);
-            },
-            error(err) {
-                console.log(err);
+                addShopcar();
             }
-        });
+        );
     }
 
     function bindEvent() {
@@ -80,6 +79,30 @@ define(["jquery", "jquery-cookie"], function ($) {
                     $(this).hide();
                 }
             });
+        });
+    }
+
+    function addShopcar() {
+        $('#cplist').on("click", '.add', function () {
+            // console.log($(this));
+            let userId = $.cookie("userId") || "";
+            let username = $.cookie("username") || "";
+            let goodsId = $(this).closest('dl').attr('data-id');
+            // console.log(userId, username, goodsId);
+
+            // 如果登录了(cookie中存在userId和username), 如果没登录(跳转到登录页面)
+            if(userId && username){
+                // 发送请求, 把用户id(userId)和商品id(goodsId)添加到购物车数据库
+                $.ajax({
+                    url: "../api/server/addCart.php",
+                    data: { userId, goodsId }
+                }).done(data => {
+                    // console.log("返回值", data);
+                    alert(data);
+                });
+            }else{
+                location.replace('./login.html');
+            }
         });
     }
 

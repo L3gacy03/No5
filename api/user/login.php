@@ -18,7 +18,7 @@ if(mysql_num_rows($res) > 0){
     // 获取对应的id值
     $result = mysqli_query($db,$sql);
     $res1 = mysqli_fetch_all($result, MYSQLI_ASSOC)[0];
-    $userId = $res1["Id"];
+    $userId = $res1["userId"];
     // 登录成功
     echo json_encode(array(
         "code" => 1,
