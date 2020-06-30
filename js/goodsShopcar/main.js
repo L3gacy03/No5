@@ -21,5 +21,5 @@ require.config({
 // 前后模块，和后面的参数，顺序一定要一一对应。
 // 异步运行
 require(["goodsShopcar"], function (goodsShopcar) {
-    
+    goodsShopcar.cartRender();
 })
