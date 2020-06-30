@@ -1,4 +1,4 @@
-define(["jquery", "jquery-cookie"], function () {
+define(["jquery", "jquery-cookie"], function ($) {
     // header & footer
     function common() {
         // 找到cookie
