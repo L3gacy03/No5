@@ -1,7 +1,7 @@
 define(["jquery", "jquery-cookie"], function ($) {
     function bindEvent() {
         // 小图和大图的切换
-        $('#picIdxBox').on('mouseenter', 'li', function () {
+        $('#picIdxBox').on('mousemove', 'li', function () {
             $(this).addClass('pic_on').siblings().removeClass('pic_on');
             $('#pic_box').find('img').hide().eq($(this).index()).show();
             $('#zoomBox .disBox img').hide().eq($(this).index()).show();

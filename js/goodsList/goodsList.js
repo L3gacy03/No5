@@ -6,12 +6,12 @@ define(["jquery", "jquery-cookie"], function ($) {
         });
         success.done(data => {
                 // console.log(data);
-                let html = data.map(item => {
+                let html = data.map((item, index) => {
                     return `
                     <dl data-id="${item.goodsId}">
                         <dt>
-                            <a href="javascript:;">
-                                <img src="${item.imgUrl}" width="200" height="200" />
+                            <a href="${index == 0 ? './goodsDetail.html' : 'javascript:;'}">
+                                <img src="${item.imgUrl}"/>
                             </a>
                         </dt>
                         <dd class="pro-name">

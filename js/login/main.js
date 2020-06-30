@@ -24,5 +24,6 @@ require.config({
 // 异步运行
 require(["common", "login"], function (common, login) {
     common.common();
+    common.shopcarRender();
     login.bindEvent();
 })

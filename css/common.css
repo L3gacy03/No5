@@ -239,7 +239,7 @@
 }
 
 .headbox .shoppingcart:hover .shoplist .goodslist {
-  width: 290px;
+  width: 310px;
   max-height: 300px;
   overflow-y: auto;
 }
@@ -292,7 +292,7 @@
   font-weight: normal;
   font-family: simsun;
   color: #1968c0;
-  cursor: auto;
+  cursor: pointer;
 }
 
 .headbox .shoppingcart:hover .shoplist .lastdl {

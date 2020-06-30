@@ -1,13 +1,13 @@
 define(["jquery", "jquery-cookie"], function ($) {
     // header & footer
     function common() {
-        // 找到cookie
-        let username = $.cookie('username');
-        if(username){
+        let userId = $.cookie("userId") || "";
+        let username = $.cookie("username") || "";
+        if (username) {
             // console.log(username);
             $('.head-welcome b').text(username);
             $('.head-welcome span').html('<a href="javascript:;" id="exit">[退出]</a>');
-        }else{
+        } else {
             $('.head-welcome b').text('欢迎光临No5时尚广场');
         }
         // 点击退出时, 清空cookie
@@ -16,6 +16,8 @@ define(["jquery", "jquery-cookie"], function ($) {
                 $.cookie('username', '', { expires: -1, path: '/' });
                 $('.head-welcome b').text('欢迎光临No5时尚广场');
                 $('.head-welcome span').html('[<a href="./html/login.html">登录</a>] [<a href="./html/register.html">免费注册</a>]');
+                $('.shoplist').html("&nbsp;&nbsp;&nbsp;&nbsp;购物车中还没有商品，赶紧选购吧！");
+                $('.trigger strong').text(0);
             }
         });
 
@@ -160,11 +162,11 @@ define(["jquery", "jquery-cookie"], function ($) {
 
         // 点击搜索输入框, 清空输入框
         $('#search').focus(function () {
-            if($(this).val() == '护手霜'){
+            if ($(this).val() == '护手霜') {
                 $(this).val('');
             }
         }).blur(function () {
-            if($(this).val() == ''){
+            if ($(this).val() == '') {
                 $(this).val('护手霜');
             }
         });
@@ -193,61 +195,84 @@ define(["jquery", "jquery-cookie"], function ($) {
                 }).join('');
                 $('#brandList').html(html);
             },
-            error(err){
+            error(err) {
                 console.log(err);
             }
         });
     }
 
+    // 渲染购物车列表
     function shopcarRender() {
         let userId = $.cookie("userId") || "";
         let username = $.cookie("username") || "";
         // console.log(userId, username);
 
-        if(userId && username){
-            $.ajax({
-                url: "./api/server/getCart.php",
-                data: { userId },
-                dataType: "json"
-            }).done(data => {
-                console.log(data);
-                let html = data.map(item => {
-                    return `
-                    <dl>
-                        <dt>
-                            <a href="javascript:;">
-                                <img src="${item.imgUrl}">
-                            </a>
-                        </dt>
-                        <dd class="pro-name">
-                            <a href="javascript:;">${item.title}</a>
-                        </dd>
-                        <dd class="pro-price">
-                            ￥${item.price}×${item.num}<a href="javascript:;">删除</a>
-                        </dd>
-                    </dl>
-                    `;
-                }).join('');
-                let sum = 0;
-                let goodsNum = 0;
-                for (let i = 0; i < data.length; i++) {
-                    sum += data[i].price * data[i].num;
-                    goodsNum += parseInt(data[i].num);
-                }
-                html += `
-                    <div class="sum">
-                        <p>共<b>${goodsNum}</b>件商品　　金额总计：<em>￥${sum}</em></p>
-                        <a href="./html/goodsShopcar.html">去购物车结算</a>
-                    </div>
-                `;
-                $('.shoplist').html(html);
-                // 更新购物车数量
-                $('.trigger strong').text(goodsNum);
-            });
+        if (userId && username) {
+            getData(userId);
         }
+
+        // 点击删除按钮, 删除商品数据
+        $('.shoplist').on('click', '.pro-price a', function () {
+            let goodsId = $(this).closest('dl').attr('data-id');
+            // console.log($(this));
+            if (confirm("确定删除吗?")) {
+                $.ajax({
+                    url: "./api/server/delCart.php",
+                    data: { userId, goodsId }
+                }).done(data => {
+                    console.log(data);
+                    // 重新渲染数据
+                    getData(userId);
+                });
+            }
+        });
+    }
+
+    function getData(userId) {
+        $.ajax({
+            url: "./api/server/getCart.php",
+            data: { userId },
+            dataType: "json"
+        }).done(data => {
+            // console.log(data);
+            let html = '<div class="goodslist">'
+            html += data.map(item => {
+                return `
+                <dl data-id="${item.goodsId}">
+                    <dt>
+                        <a href="javascript:;">
+                            <img src="${item.imgUrl}">
+                        </a>
+                    </dt>
+                    <dd class="pro-name">
+                        <a href="javascript:;">${item.title}</a>
+                    </dd>
+                    <dd class="pro-price">
+                        ￥${item.price}×${item.num}<a href="javascript:;">删除</a>
+                    </dd>
+                </dl>
+                `;
+            }).join('');
+            html += '</div>';
+            let sum = 0;
+            let goodsNum = 0;
+            for (let i = 0; i < data.length; i++) {
+                sum += data[i].price * data[i].num;
+                goodsNum += parseInt(data[i].num);
+            }
+            html += `
+                <div class="sum">
+                    <p>共<b>${goodsNum}</b>件商品　　金额总计：<em>￥${sum}</em></p>
+                    <a href="./html/goodsShopcar.html">去购物车结算</a>
+                </div>
+            `;
+            $('.shoplist').html(html);
+            // 更新购物车数量
+            $('.trigger strong').text(goodsNum);
+        });
     }
 
     return {
-        common,content,shopcarRender
+        common, content, shopcarRender
     }
 });
