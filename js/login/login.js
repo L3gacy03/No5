@@ -65,25 +65,34 @@ define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
                     data: user,
                     dataType: "json"
                 }).done(data => {
-                    console.log(data);
-                    // if (data.code == 1) {
-                    //     // 在登录页面存cookie
-                    //     // 如果选了记住登录状态
-                    //     if ($('#noLogin').is(":checked")) {
-                    //         $.cookie('username', user.username, {
-                    //             expires: 7,
-                    //             path: '/'
-                    //         });
-                    //     } else {
-                    //         $.cookie('username', user.username, {
-                    //             path: '/'
-                    //         });
-                    //     }
-                    //     alert(data.msg);
-                    //     location.replace('../index.html');
-                    // } else {
-                    //     alert(data.msg);
-                    // }
+                    // console.log(data);
+                    if (data.code == 1) {
+                        // 在登录页面存cookie
+                        // 如果选了记住登录状态
+                        if ($('#noLogin').is(":checked")) {
+                            $.cookie('userId', data.userId, {
+                                expires: 7,
+                                path: '/'
+                            });
+                            $.cookie('username', data.username, {
+                                expires: 7,
+                                path: '/'
+                            });
+                        } else {
+                            $.cookie('userId', data.userId, {
+                                path: '/'
+                            });
+                            $.cookie('username', data.username, {
+                                path: '/'
+                            });
+                            // localStorage.setItem("userId", data.userId);
+                            // localStorage.setItem("username", data.username);
+                        }
+                        alert(data.msg);
+                        location.replace('../index.html');
+                    } else {
+                        alert(data.msg);
+                    }
                 });
             }
 
