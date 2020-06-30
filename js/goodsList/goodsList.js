@@ -72,9 +72,11 @@ define(["jquery", "jquery-cookie"], function ($) {
                 if($(self).text().includes($(this).attr("elem-data"))){
                     $(this).show();
                 }else if($(self).text() == '不限'){
+                    $('.more').text('更多');
                     $('.brands').find('div').show();
                     $('.brands div:eq(19)').nextAll().hide();
                 }else{
+                    $('.more').text('更多');
                     $(this).hide();
                 }
             });
