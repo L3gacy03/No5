@@ -1,5 +1,8 @@
 define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
     function bindEvent() {
+        $('.fixlogininput:first').val('123qwe');
+        $('.fixlogininput:last').val('123qwe');
+
         $('.fixlogininput:first').focus(function () {
             $(this).siblings('.tip').text('').removeClass('reg_errmsg');
         });
@@ -62,25 +65,25 @@ define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
                     data: user,
                     dataType: "json"
                 }).done(data => {
-                    // console.log(data);
-                    if (data.code == 1) {
-                        // 在登录页面存cookie
-                        // 如果选了记住登录状态
-                        if ($('#noLogin').is(":checked")) {
-                            $.cookie('username', user.username, {
-                                expires: 7,
-                                path: '/'
-                            });
-                        } else {
-                            $.cookie('username', user.username, {
-                                path: '/'
-                            });
-                        }
-                        alert(data.msg);
-                        location.replace('../index.html');
-                    } else {
-                        alert(data.msg);
-                    }
+                    console.log(data);
+                    // if (data.code == 1) {
+                    //     // 在登录页面存cookie
+                    //     // 如果选了记住登录状态
+                    //     if ($('#noLogin').is(":checked")) {
+                    //         $.cookie('username', user.username, {
+                    //             expires: 7,
+                    //             path: '/'
+                    //         });
+                    //     } else {
+                    //         $.cookie('username', user.username, {
+                    //             path: '/'
+                    //         });
+                    //     }
+                    //     alert(data.msg);
+                    //     location.replace('../index.html');
+                    // } else {
+                    //     alert(data.msg);
+                    // }
                 });
             }
 
