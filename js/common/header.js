@@ -68,7 +68,7 @@ document.writeln("                <a href=\'javascript:;\' class=\'\'>专柜小�
 document.writeln("                <a href=\'javascript:;\' class=\'\'>口红</a>");
 document.writeln("            </div>");
 document.writeln("        </div>");
-document.writeln("        <a href=\'../html/goodsShopcar.html\' id=\'page-cartbar\' class=\'shoppingcart\'>");
+document.writeln("        <a href=\'./goodsShopcar.html\' id=\'page-cartbar\' class=\'shoppingcart\'>");
 document.writeln("            <div class=\'trigger\' style=\'cursor: pointer;\'>购物车<strong>0</strong>件</div>");
 document.writeln("            <div class=\'shoplist\'>");
 document.writeln("                &nbsp;&nbsp;&nbsp;&nbsp;购物车中还没有商品，赶紧选购吧！");

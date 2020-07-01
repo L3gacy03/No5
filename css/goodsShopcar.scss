@@ -195,6 +195,17 @@ ul {
         border-bottom-width: 1px;
         border-bottom-style: dashed;
         border-bottom-color: #cccccc;
+
+        &:nth-child(2){
+            width: 466px;
+        }
+
+        div{
+            a{
+                display: block;
+                width: 100%;
+            }
+        }
     }
 }
 

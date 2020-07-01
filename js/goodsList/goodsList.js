@@ -1,4 +1,5 @@
-define(["jquery", "jquery-cookie"], function ($) {
+define(["common", "jquery", "jquery-cookie"], function (common, $) {
+    // 商品渲染
     function goodsListRender() {
         let success = $.ajax({
             type: "GET",
@@ -82,6 +83,7 @@ define(["jquery", "jquery-cookie"], function ($) {
         });
     }
 
+    // 点击加入购物车
     function addShopcar() {
         $('#cplist').on("click", '.add', function () {
             // console.log($(this));
@@ -98,6 +100,7 @@ define(["jquery", "jquery-cookie"], function ($) {
                     data: { userId, goodsId }
                 }).done(data => {
                     // console.log("返回值", data);
+                    common.getData(userId);
                     alert(data);
                 });
             }else{

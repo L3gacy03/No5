@@ -180,7 +180,7 @@ define(["jquery", "jquery-cookie"], function ($) {
         // console.log(userId, username);
 
         if (userId && username) {
-            getData();
+            getData(userId);
         }
 
         // 点击删除按钮, 删除商品数据
@@ -194,12 +194,13 @@ define(["jquery", "jquery-cookie"], function ($) {
                 }).done(data => {
                     // console.log(data);
                     // 重新渲染数据
-                    getData();
+                    getData(userId);
                 });
             }
         });
+    }
 
-    function getData() {
+    function getData(userId) {
         $.ajax({
             url: "../api/server/getCart.php",
             data: { userId },
@@ -209,20 +210,20 @@ define(["jquery", "jquery-cookie"], function ($) {
             let html = '<div class="goodslist">'
             html += data.map(item => {
                 return `
-                    <dl data-id="${item.goodsId}">
-                        <dt>
-                            <a href="javascript:;">
-                                <img src="${item.imgUrl}">
-                            </a>
-                        </dt>
-                        <dd class="pro-name">
-                            <a href="javascript:;">${item.title}</a>
-                        </dd>
-                        <dd class="pro-price">
-                            ￥${item.price}×${item.num}<a href="javascript:;">删除</a>
-                        </dd>
-                    </dl>
-                    `;
+                <dl data-id="${item.goodsId}">
+                    <dt>
+                        <a href="javascript:;">
+                            <img src="${item.imgUrl}">
+                        </a>
+                    </dt>
+                    <dd class="pro-name">
+                        <a href="javascript:;">${item.title}</a>
+                    </dd>
+                    <dd class="pro-price">
+                        ￥${item.price}×${item.num}<a href="javascript:;">删除</a>
+                    </dd>
+                </dl>
+                `;
             }).join('');
             html += '</div>';
             let sum = 0;
@@ -232,20 +233,19 @@ define(["jquery", "jquery-cookie"], function ($) {
                 goodsNum += parseInt(data[i].num);
             }
             html += `
-                    <div class="sum">
-                        <p>共<b>${goodsNum}</b>件商品　　金额总计：<em>￥${sum}</em></p>
-                        <a href="./goodsShopcar.html">去购物车结算</a>
-                    </div>
-                `;
+                <div class="sum">
+                    <p>共<b>${goodsNum}</b>件商品　　金额总计：<em>￥${sum}</em></p>
+                    <a href="./goodsShopcar.html">去购物车结算</a>
+                </div>
+            `;
             $('.shoplist').html(html);
             // 更新购物车数量
             $('.trigger strong').text(goodsNum);
         });
     }
-    }
 
 
     return {
-        common, shopcarRender
+        common, shopcarRender, getData
     }
 });

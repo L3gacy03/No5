@@ -9,6 +9,7 @@ require.config({
         //自定义的模块名字: 模块的路径
         "jquery": "../../libs/jquery-1.10.1.min",
         "jquery-cookie": "../../libs/jquery.cookie",
+        "common": "../common/common",
         "goodsShopcar": "goodsShopcar"
     },
     shim: {
@@ -22,4 +23,5 @@ require.config({
 // 异步运行
 require(["goodsShopcar"], function (goodsShopcar) {
     goodsShopcar.cartRender();
+    goodsShopcar.bindEvent();
 })

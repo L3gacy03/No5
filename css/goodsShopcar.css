@@ -188,6 +188,15 @@ ul.act li {
   border-bottom-color: #cccccc;
 }
 
+.gray-border td:nth-child(2) {
+  width: 466px;
+}
+
+.gray-border td div a {
+  display: block;
+  width: 100%;
+}
+
 .cart-tip {
   background-image: url(http://www.no5.com.cn/images/cart-tip-bg.png);
   background-repeat: repeat-x;

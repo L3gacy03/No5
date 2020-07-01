@@ -232,7 +232,7 @@
   left: -98px;
   position: absolute;
   top: 42px;
-  width: 290px;
+  width: 310px;
   max-height: 374px;
   z-index: 10;
   padding-top: 10px;
@@ -277,7 +277,7 @@
 }
 
 .headbox .shoppingcart:hover .shoplist dl .pro-price {
-  width: 58px;
+  width: 65px;
   text-align: right;
   float: right;
   color: #ff1a3a;
