@@ -35,6 +35,20 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
     }
 
     function bindEvent() {
+        // 点击第二页
+        $('.inner').on('click', 'a', function () {
+            $.ajax({
+                url: "../api/server/getGoods.php",
+                dataType: "json",
+                success(data){
+                    console.log(data);
+                },
+                error(err){
+                    console.log(err);
+                }
+            });
+        });
+
         // 左边商品分类导航栏
         $('#left-catnav').on('click', 'h3', function () {
             if ($(this).find('span').hasClass('open')) {
