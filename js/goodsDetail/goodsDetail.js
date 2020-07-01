@@ -1,4 +1,4 @@
-define(["jquery", "jquery-cookie"], function ($) {
+define(["common", "jquery", "jquery-cookie"], function (common, $) {
     function bindEvent() {
         // 小图和大图的切换
         $('#picIdxBox').on('mousemove', 'li', function () {
@@ -54,6 +54,34 @@ define(["jquery", "jquery-cookie"], function ($) {
         $('#boxBuy span img:last').click(function () {
             goodsNum ++;
             $('#buyAnt').val(goodsNum);
+        });
+
+        // 数量输入框的事件监听
+        $('#buyAnt').change(function () {
+            goodsNum = $(this).val();
+            $('#buyAnt').val(goodsNum);
+        })
+
+        // 加入购物车功能
+        $('#btnBuy').click(function () {
+            let userId = $.cookie("userId") || "";
+            let username = $.cookie("username") || "";
+            let goodsId = $('#goodsId').attr('data-id');
+            let num = $('#buyAnt').val();
+            // 如果登录了(cookie中存在userId和username), 如果没登录(跳转到登录页面)
+            if(userId && username){
+                // 发送请求, 把用户id(userId)和商品id(goodsId)添加到购物车数据库
+                $.ajax({
+                    url: "../api/server/addCart_goodsDetail.php",
+                    data: { userId, goodsId, num }
+                }).done(data => {
+                    // console.log("返回值", data);
+                    common.getData(userId);
+                    alert(data);
+                });
+            }else{
+                location.replace('./login.html');
+            }
         });
     }
 
