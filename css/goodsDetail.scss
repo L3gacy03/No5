@@ -273,14 +273,11 @@ h2 {
 
 .prodTxt2 {
     vertical-align : middle;
-    _vertical-align: top;
     margin-left    : 15px;
     margin-right   : 5px;
 
     img {
         margin-bottom: 6px;
-        _position    : relative;
-        _top         : -2px;
     }
 }
 
@@ -297,10 +294,6 @@ h2 {
     height         : 72px;
     line-height    : 72px;
     padding-left   : 21px;
-    _height        : 0px;
-    _line-height   : 0px;
-    _padding-top   : 16px;
-    _padding-bottom: 16px;
 
     img {
         cursor: hand;
@@ -393,7 +386,6 @@ h2 {
 .p1 {
     vertical-align: middle;
     margin-bottom : 5px;
-    _margin-top   : 4px;
 }
 
 .textinput {
@@ -528,7 +520,6 @@ h2 {
         padding     : 5px 2px 4px 20px;
         border      : 1px solid #309103;
         background  : #eefee7 url(http://photo.no5.com.cn/main/images/bg/rgline.gif) no-repeat 0px -4px;
-        *background : #eefee7 url(http://photo.no5.com.cn/main/images/bg/rgline.gif) no-repeat 0px -2px;
         color       : #2d940e;
 
         a {
