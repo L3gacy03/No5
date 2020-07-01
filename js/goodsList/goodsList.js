@@ -1,11 +1,10 @@
 define(["common", "jquery", "jquery-cookie"], function (common, $) {
     // 商品渲染
     function goodsListRender() {
-        let success = $.ajax({
+        $.ajax({
             type: "GET",
             url: "../api/getJSON/goodsList.php"
-        });
-        success.done(data => {
+        }).done(data => {
                 // console.log(data);
                 let html = data.map((item, index) => {
                     return `

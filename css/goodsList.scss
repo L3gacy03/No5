@@ -682,13 +682,6 @@
     }
 }
 
-/*二级页面共有部分*/
-.shaixuan {
-    dl {
-        display: none;
-    }
-}
-
 /*left*/
 .content .c-left .sidebar a:hover,
 .content .c-left .sidebar li:hover a {
@@ -736,23 +729,6 @@
     line-height  : 14px;
     color        : #005aa0;
     margin-top   : 2px;
-}
-
-#load-tip {
-    position   : absolute;
-    visibility : hidden;
-    color      : #ff4e00;
-    background : #fef8d1 url(/images/loading.gif) no-repeat 420px;
-    border     : 1px solid #fce3b6;
-    padding    : 10px;
-    width      : 938px;
-    text-align : center;
-    margin-top : 40px;
-    margin-left: -11px;
-    margin-top : 15px;
-    opacity    : 0.8;
-    filter     : alpha(opacity=80);
-    box-shadow : 3px 3px 1px #b8b8b8;
 }
 
 /*搜索页*/

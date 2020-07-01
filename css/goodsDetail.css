@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.imgLoad31 {
-  background: url(http://photo.no5.com.cn/main/images/ldg_gry_31.gif) no-repeat 50% 50%;
-}
-
 .clear {
   background: none;
   border: 0;
@@ -50,26 +46,6 @@ a {
 
 a:hover {
   color: #fc7f0f;
-}
-
-.hot_spic {
-  width: 23px;
-  height: 11px;
-  background: url(http://photo.no5.com.cn/main/images/hot.jpg) no-repeat;
-  position: absolute;
-  z-index: 98;
-  top: 69px;
-  left: 1167px;
-}
-
-.new_spic {
-  width: 23px;
-  height: 11px;
-  background: url(http://photo.no5.com.cn/main/images/new_pic.jpg) no-repeat;
-  position: absolute;
-  z-index: 98;
-  top: 69px;
-  left: 1082px;
 }
 
 .content {
