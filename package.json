@@ -10,5 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L3gacy03/No5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/L3gacy03/No5/issues"
+  },
+  "homepage": "https://github.com/L3gacy03/No5#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass": "^4.1.0"
   }
 }

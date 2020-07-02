@@ -504,6 +504,7 @@
   padding-left: 12px;
   color: #ccc;
   cursor: default;
+  pointer-events: none;
 }
 
 .content .c-right .filter .total {
