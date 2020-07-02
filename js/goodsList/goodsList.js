@@ -1,6 +1,25 @@
 define(["common", "jquery", "jquery-cookie"], function (common, $) {
     // 商品渲染
     function goodsListRender() {
+        $.ajax({
+            url: "../api/server/getPageCount.php"
+        }).done(size => {
+            // 总页数
+            // console.log(size);
+            // 更新商品总数
+            $('.total span strong').text(size * 36);
+            // 更新总页数
+            let pageSum = `<i>1</i>/${size}`;
+            $('.mb').html(pageSum);
+            // 渲染页数
+            let page = '';
+            for (let i = 0; i < size; i++) {
+                page += `
+                    <a href="javascript:;" class=${i == 0 ? "curr" : ""}>${i + 1}</a>
+                `;
+            }
+            $('#prevBtn1').after(page);
+        });
         changePage(1);
         addShopcar();
     }
@@ -9,10 +28,11 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
     /**
      * @param   page    <number>    第几页
      */
-    function changePage(page) {
+    function changePage(page, sort = "default") {
         // 更改页面商品
         $.ajax({
             url: "../api/server/getGoods.php",
+            data: { sort },
             dataType: "json",
             success(data) {
                 // console.log(data);
@@ -25,7 +45,7 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
                     html += `
                     <dl data-id="${data[i].goodsId}">
                         <dt>
-                            <a href="${ i == 0 ? './goodsDetail.html' : 'javascript:;' }">
+                            <a href="${ i == 0 ? './goodsDetail.html' : 'javascript:;'}">
                                 <img src="${data[i].imgUrl}"/>
                             </a>
                         </dt>
@@ -55,47 +75,59 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
 
     function bindEvent() {
         let page = 1;
+        let sort = 'default';
+        // 点击按默认/价格排序
+        $('.filter dl').on('click', 'dd', function () {
+            page = $('.inner a.curr').text();
+            // console.log($(this).data().sort);
+            $(this).addClass('curr').siblings('dd').removeClass('curr');
+            sort = $(this).data().sort;
+            changePage(page, sort);
+        });
         // 点击第n页
         $('.inner').on('click', 'a', function () {
             // console.log($(this).text());
             page = $(this).text();
-            changePage(page);
+            changePage(page, sort);
             $(this).addClass('curr').siblings().removeClass('curr');
             // 处理下一页上一页按钮的状态
-            if(page >= 3){
-                page = 3;
+            // 页数
+            let size = $('.inner a').size();
+            if (page >= size) {
+                page = size;
                 $('#nextBtn').add('#nextBtn1').addClass('disa-btn');
-            }else{
+            } else {
                 $('#nextBtn').add('#nextBtn1').removeClass('disa-btn');
             }
-            if(page <= 1){
+            if (page <= 1) {
                 page = 1;
                 $('#prevBtn').add('#prevBtn1').addClass('disa-btn');
-            }else{
+            } else {
                 $('#prevBtn').add('#prevBtn1').removeClass('disa-btn');
             }
         });
 
         // 点击下一页
         $('#nextBtn').add('#nextBtn1').click(function () {
-            page ++;
+            let size = $('.inner a').size();
+            page++;
             $('#prevBtn').add('#prevBtn1').removeClass('disa-btn');
-            if(page >= 3){
-                page = 3;
+            if (page >= size) {
+                page = size;
                 $('#nextBtn').add('#nextBtn1').addClass('disa-btn');
             }
-            changePage(page);
+            changePage(page, sort);
             $('.inner a').removeClass('curr').eq(page - 1).addClass('curr');
         });
         // 点击上一页
         $('#prevBtn').add('#prevBtn1').click(function () {
-            page --;
+            page--;
             $('#nextBtn').add('#nextBtn1').removeClass('disa-btn');
-            if(page <= 1){
+            if (page <= 1) {
                 page = 1;
                 $('#prevBtn').add('#prevBtn1').addClass('disa-btn');
             }
-            changePage(page);
+            changePage(page, sort);
             $('.inner a').removeClass('curr').eq(page - 1).addClass('curr');
         });
 

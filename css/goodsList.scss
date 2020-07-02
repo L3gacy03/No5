@@ -646,6 +646,10 @@
         .inner {
             float     : right;
             margin-top: 20px;
+
+            span{
+                cursor: pointer;
+            }
         }
 
         a {
@@ -671,6 +675,7 @@
         .disa-btn {
             color : #ccc;
             cursor: default;
+            pointer-events: none;
         }
 
         .curr {

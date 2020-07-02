@@ -633,6 +633,10 @@
   margin-top: 20px;
 }
 
+.content .page-below .inner span {
+  cursor: pointer;
+}
+
 .content .page-below a:hover {
   background-color: #ccc;
 }
@@ -652,6 +656,7 @@
 .content .page-below .disa-btn {
   color: #ccc;
   cursor: default;
+  pointer-events: none;
 }
 
 .content .page-below .curr {
