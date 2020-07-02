@@ -1,33 +1,14 @@
 <?php
 
-// 连接数据库
+// 1、连接数据库
+include_once "./connectDB.php";
 
-// localhost 主机名
-// root 用户名
-// 密码为空, 如果有密码第三个参数写上密码(wamp密码为空, phpstudy密码为root)
-mysql_connect('localhost', 'root', 'root');
+// 多表查询
+$sql = "SELECT * FROM goods";
 
-// 选择数据库
-mysql_select_db('no5');
+$result = mysqli_query($db,$sql);
 
-// 这两句设置编码, 直接使用
-mysql_query('set charset "utf8"');
-mysql_query('set character set "utf8"');
-
-$sql = "select * from goods";
-
-$res = mysql_query($sql);
-
-$shop = array();
-while($row = mysql_fetch_assoc($res)){
-    array_push($shop, $row);
-}
-
-echo json_encode(array(
-    "code" => 200,
-    "body" => array(
-        "list" => $shop
-    )
-));
+$data = mysqli_fetch_all($result,MYSQLI_ASSOC);
+echo json_encode($data,true);
 
 ?>
