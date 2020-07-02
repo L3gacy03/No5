@@ -2,6 +2,7 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
     // 商品渲染
     function goodsListRender() {
         changePage(1);
+        addShopcar();
     }
 
     // 封装换页函数
@@ -14,7 +15,7 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
             url: "../api/server/getGoods.php",
             dataType: "json",
             success(data) {
-                console.log(data);
+                // console.log(data);
                 let html = '';
                 // 1    1   36
                 // 2    37  72
@@ -43,7 +44,6 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
                     `;
                 }
                 $('#cplist').html(html);
-                addShopcar();
             },
             error(err) {
                 console.log(err);

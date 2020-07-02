@@ -73,7 +73,7 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
             dataType: "json"
         }).done(data => {
             // console.log(data);
-            // console.log(data[0].title.split(" ")[1]);
+            // console.log(data[0].title.split(" ")[1]); 
             // console.log(data[0].price / data[0].discount.slice(1, -2) * 10 );
             let html = `
             <tr class="cart-tip">
