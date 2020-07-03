@@ -186,7 +186,7 @@
 }
 
 .width60 {
-  width: 60px;
+  width: 70px;
   height: 25px;
   line-height: 23px;
   text-align: right;
@@ -220,7 +220,7 @@
   width: 110px;
   position: absolute;
   top: -14px;
-  left: 120px;
+  left: 150px;
 }
 
 #txtVerifyCodeChkMsg {

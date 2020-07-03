@@ -55,7 +55,7 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
                 let num = $.trim($(this).val());
                 let goodsId = $(this).closest('tr').attr('data-id');
                 $.ajax({
-                    url: "../api/server/updataCart.php",
+                    url: "../api/server/updateCart.php",
                     data: { userId, goodsId, num },
                     dataType: "json"
                 }).done(resp => {

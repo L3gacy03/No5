@@ -45,7 +45,7 @@ define(["common", "jquery", "jquery-cookie"], function (common, $) {
                     html += `
                     <dl data-id="${data[i].goodsId}">
                         <dt>
-                            <a href="${ i == 0 ? './goodsDetail.html' : 'javascript:;'}">
+                            <a href="${ data[i].goodsId == 1 ? './goodsDetail.html' : 'javascript:;'}">
                                 <img src="${data[i].imgUrl}"/>
                             </a>
                         </dt>
