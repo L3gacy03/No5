@@ -1,7 +1,7 @@
 define(["jquery", "jquery-cookie", "captcha"], function ($, captcha) {
     function bindEvent() {
-        $('.fixlogininput:first').val('123qwe');
-        $('.fixlogininput:last').val('123qwe');
+        // $('.fixlogininput:first').val('123qwe');
+        // $('.fixlogininput:last').val('123qwe');
 
         $('.fixlogininput:first').focus(function () {
             $(this).siblings('.tip').text('').removeClass('reg_errmsg');
